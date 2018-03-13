@@ -1,0 +1,106 @@
+commit 9f3cf2d444bca6535297dc7fa3afb415419edf26
+Author: Lauri Väänänen <lauri.e.vaananen@helsinki.fi>
+Date:   Tue Mar 13 05:15:18 2018 +0200
+
+    Poistettin file1, uudelleen nimettin file2 -> file22
+
+ tiedostoja/file1  | 0
+ tiedostoja/file2  | 0
+ tiedostoja/file22 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 5f7d845f8d58e10c7882bf4794266adb67805731
+Author: Lauri Väänänen <lauri.e.vaananen@helsinki.fi>
+Date:   Tue Mar 13 05:13:20 2018 +0200
+
+    Lisättiin tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 1 +
+ 3 files changed, 1 insertion(+)
+
+commit b99d18fcd8c1f9e8fd48ba975d2271e7f2e47e00
+Author: Lauri Väänänen <lauri.e.vaananen@helsinki.fi>
+Date:   Tue Mar 13 05:05:42 2018 +0200
+
+    Muutettiin tiedostoja
+
+ eka.txt    | 8 +++-----
+ kolmas.txt | 7 ++++++-
+ 2 files changed, 9 insertions(+), 6 deletions(-)
+
+commit b274cca9997b5e935a8f8b93afad51ca398ff0d2
+Author: Lauri Väänänen <lauri.e.vaananen@helsinki.fi>
+Date:   Tue Mar 13 05:01:34 2018 +0200
+
+    Uudelleen nimettiin tiedosto.txt -> eka.txt
+
+ eka.txt      | 33 +++++++++++++++++++++++++++++++++
+ tiedosto.txt | 33 ---------------------------------
+ 2 files changed, 33 insertions(+), 33 deletions(-)
+
+commit fb3132942a9c48aa1e6fd7bf066fe9cd2ae6c98e
+Author: Lauri Väänänen <lauri.e.vaananen@helsinki.fi>
+Date:   Tue Mar 13 04:59:29 2018 +0200
+
+    Poistettiin toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit bfe6da888bb699c707efd47d9d4927239cd16436
+Author: Lauri Väänänen <lauri.e.vaananen@helsinki.fi>
+Date:   Tue Mar 13 04:56:28 2018 +0200
+
+    Lisätty paljon tekstiä
+
+ tiedosto.txt | 32 ++++++++++++++++++++++++++++++++
+ 1 file changed, 32 insertions(+)
+
+commit 9e76d647b402c89b6b5281bc0e212470aa1b7e82
+Author: Lauri Väänänen <lauri.e.vaananen@helsinki.fi>
+Date:   Tue Mar 13 04:49:16 2018 +0200
+
+    stuff/teksti.txt luotu
+
+ stuff/teksti.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit d9f63a333da4dbe19dbaef8adeb27d007c97c53f
+Author: Lauri Väänänen <lauri.e.vaananen@helsinki.fi>
+Date:   Tue Mar 13 04:47:32 2018 +0200
+
+    muutettu tiedostoja toinen.txt ja kolmas.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 1e3e79308e3d1a867a913ccb6d8899056ac2911a
+Author: Lauri Väänänen <lauri.e.vaananen@helsinki.fi>
+Date:   Tue Mar 13 04:46:42 2018 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 40cbddd5345c5d9b9b10b50b3382197d3fdd0076
+Author: Lauri Väänänen <lauri.e.vaananen@helsinki.fi>
+Date:   Tue Mar 13 04:44:37 2018 +0200
+
+    Muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 607bbbb0fc5c611bd0e06e2a89282db71c031a91
+Author: Lauri Väänänen <lauri.e.vaananen@helsinki.fi>
+Date:   Tue Mar 13 04:33:03 2018 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
