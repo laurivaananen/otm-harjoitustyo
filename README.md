@@ -1,8 +1,7 @@
-# otm-harjoitustyö
+# Slack botti
 
-## Viikko1
+Kurssille Ohjelmistotekniikan menetelmät.
 
-* [gitlog.txt](https://github.com/laurivaananen/otm-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-* [komentorivi.txt](https://github.com/laurivaananen/otm-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+## Dokumentaatio 
 
-Git
+[Vaatimusmäärittely](/dokumentaatio/vaatimusmaarittely.md)
