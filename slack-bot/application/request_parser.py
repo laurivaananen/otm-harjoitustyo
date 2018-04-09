@@ -33,4 +33,4 @@ class EventRequest(object):
 
     def print_request(self):
         for key, value in self.request.items():
-            print("{}, {}".format(key, value))
+            print("\n{}, {}".format(key, value))
