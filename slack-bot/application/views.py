@@ -1,5 +1,7 @@
 from application import app
 from flask import request, jsonify
+from application.request_parser import SlashCommandRequest, EventRequest
+from application.response_parser import SlashCommandResponse
 
 import json
 import os
@@ -7,7 +9,12 @@ import os
 @app.route("/", methods=["GET", "POST"])
 def index():
 
-    # request_json = request.get_json()
+    request_data = EventRequest(request)
+
+    request_data.print_request()
+
+    response_data = SlashCommandResponse()
+    response_data.add_text("Message received")
 
     # print(request_json)
 
@@ -15,33 +22,24 @@ def index():
     # for key in request_json:
     #     print("Key: {}, value: {}".format(key, request_json[key]))
 
-    print("\n\n\n")
-    print(os.environ["CLIENT_ID"])
-    print(os.environ["CLIENT_SECRET"])
-    print("\n\n\n\n")
-
-    # response_json = json.dumps({"challenge":request_json["challenge"]})
+    # print("\n\n\n")
+    # print(os.environ["CLIENT_ID"])
+    # print(os.environ["CLIENT_SECRET"])
+    # print("\n\n\n\n")
 
         
 
-    return "Hello world"
+    return response_data.return_json()
 
 @app.route("/printer", methods=["GET", "POST"])
 def printer():
 
-    print("\n\n\n")
-    print(request)
-    print("\n\n\n\n")
-    print(request.form.get("text"))
-    print("\n\n\n\n")
-    for key, value in request.form.items():
-        print("{}, {}".format(key, value))
-
-
-    response_json = json.dumps({"text":"You said: {}".format(request.form.get("text"))})
+    request_data = SlashCommandRequest(request)
     
+    response_data = SlashCommandResponse()
+
+    response_data.add_text(request_data.text)
 
 
 
-
-    return jsonify({"text": "HeyWOrld", "attachments": [{"text":"Hello", "color":"good"}]})
+    return response_data.return_json()
