@@ -10,43 +10,82 @@ import os
 @app.route("/", methods=["GET", "POST"])
 def index():
 
+    request_data = SlackRequest(request)
+
+    # print("\n\n\n")
+
+    # request_data.print_request()
+
+    # print("\n\n\n")
+
+    
+
+
+    # print("\n\nPrinting event items\n\n")
+    # for key, value in event.items():
+    #     print("{}: {}".format(key, value))
+
+    # print("\n\nPrinting file items\n\n")
+    # for key, value in event["file"].items():
+    #     print("{}: {}".format(key, value))
+
+    # print("\n\n")
+
     # request_data = EventRequest(request)
 
     # request_data.print_request()
 
-    # if request_data.challenge != None:
-    #     return jsonify({"challenge":request_data.challenge})
+    # Verificating slack bot integration
 
-    request_data = SlackRequest(request)
+    if request_data.request["type"] == "url_verification":
+        return jsonify({"challenge":request_data.request["challenge"]})
+
+
+    # If the request is a message and not from a bot, send a message
 
     event = request_data.request["event"]
 
-    print("\n\nPrinting event items\n\n")
-    for key, value in event.items():
-        print("{}: {}".format(key, value))
+    if event["type"] == "message" and not "bot_id" in event:
+        request_text = event["text"]
 
-    print("\n\nPrinting file items\n\n")
-    for key, value in event["file"].items():
-        print("{}: {}".format(key, value))
+        request_user = "<@{}>".format(event["user"])
 
-    if event and event["subtype"] == "file_share" and event["bot_id"] == None:
-        print("Found file_share event")
+        request_channel = event["channel"]
 
-    print("\n\nStarting to download file\n\n")
+        message = WebAPIMessage()
 
-    file_download = event["file"]["url_private_download"]
-    file_name = event["file"]["name"]
+        message_data = "User {} sent a message: {}".format(request_user, request_text)
 
-    r = requests.get(file_download)
+        message.add_to_message("text", message_data)
 
-    print(r.status_code)
+        # message.send_message()
 
-    dirpath = os.getcwd()
+        send_message(token="xoxb-342429334896-SjycEDXh3bTFs6GOHTeEs1lg", channel=request_channel, message=message_data)
 
-    print("\n\n{}\n\n".format(dirpath))
+        return ""
 
-    with open('{}/downloads/{}'.format(dirpath, file_name), 'wb') as f:  
-        f.write(r.content)
+    # event = request_data.request["event"]
+
+
+
+    # if event and event["subtype"] == "file_share" and event["bot_id"] == None:
+    #     print("Found file_share event")
+
+    # print("\n\nStarting to download file\n\n")
+
+    # file_download = event["file"]["url_private_download"]
+    # file_name = event["file"]["name"]
+
+    # r = requests.get(file_download)
+
+    # print(r.status_code)
+
+    # dirpath = os.getcwd()
+
+    # print("\n\n{}\n\n".format(dirpath))
+
+    # with open('{}/downloads/{}'.format(dirpath, file_name), 'wb') as f:  
+    #     f.write(r.content)
 
         
 
@@ -71,7 +110,8 @@ def index():
 
     # message.send_message()
 
-    return jsonify({"text":"Message received"})
+    print("\nUnknown message type or a message from bot\n")
+    return ""
 
 @app.route("/printer", methods=["GET", "POST"])
 def printer():
@@ -97,3 +137,20 @@ def interactive():
     interacive_request.print_request()
 
     return ""
+
+
+def send_message(token, channel, message):
+
+    url = "https://slack.com/api/chat.postMessage"
+
+    headers = {"Content-type":"application/json; charset=utf-8",
+               "Authorization":"Bearer {}".format(token)
+               }
+
+    data = {"channel":channel,
+            "text":message
+            }
+
+    r = requests.post(url, headers=headers, json=data)
+
+    print(">>> {}, {}".format(r.status_code, r.text))
