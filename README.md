@@ -44,7 +44,7 @@ Seuraavaksi tehdään uusi Slack App. https://api.slack.com/apps?new_app=1 Valit
 
 ![slack_1](/dokumentaatio/slack_1.png)
 
-Lisätään uusi Event Subscription. Liitä ngrok ohjelmasta saamasi https osoite request url kohtaan. Lisää Workspace Event message.channels
+Lisätään uusi Event Subscription. Liitä ngrok ohjelmasta saamasi https osoite request url kohtaan. Lisää Workspace Event message.channels . Huom! Jos käynnistät ngrok ohjelman uudestaan joudut liittämään sen luoman uuden https osoitteen tähän.
 
 ![slack_2](/dokumentaatio/slack_2.png)
 
