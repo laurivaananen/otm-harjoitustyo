@@ -33,3 +33,25 @@ class WebAPIMessage(object):
         r = requests.post(self.url, data=json.dumps(self.message), headers=self.headers)
         print(r.status_code)
         print(r.text)
+
+
+class Attachment(object):
+
+    def __init__(self):
+        self.attachment = {}
+        self.actions = []
+
+    def add_to_attachment(self, key, value):
+        self.attachment[key] = value
+
+
+class Action(object):
+
+    def __init__(self, name, text, _type, value):
+        self.action = {}
+
+        self.action["name"] = name
+        self.action["text"] = text
+        self.action["type"] = _type
+        self.action["value"] = value
+

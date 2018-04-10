@@ -1,7 +1,7 @@
 from application import app
 from flask import request, jsonify
 from application.request_parser import SlashCommandRequest, EventRequest, SlackRequest
-from application.response_parser import SlashCommandResponse, WebAPIMessage
+from application.response_parser import SlashCommandResponse, WebAPIMessage, Attachment, Action
 
 import json
 import os
@@ -9,27 +9,39 @@ import os
 @app.route("/", methods=["GET", "POST"])
 def index():
 
-    request_data = EventRequest(request)
+    # request_data = EventRequest(request)
+
+    # request_data.print_request()
+
+    # if request_data.challenge != None:
+    #     return jsonify({"challenge":request_data.challenge})
+
+    request_data = SlackRequest(request)
 
     request_data.print_request()
 
-    print(request_data.event.file_id)
+    # message = WebAPIMessage()
+    # message.add_to_message("text", "Someone uploaded a file")
 
-    message = WebAPIMessage()
-    message.add_to_message("text", "Hi I received your message")
+    # attachment = Attachment()
 
-    print("\n\n\nHeaders: {}\n\n\n".format(message.headers))
-    print("\n\n\nBody: {}\n\n\n".format(message.message))
+    # attachment.add_to_attachment("text", "Do you want to download this file?")
+    # attachment.add_to_attachment("fallback", "You are unable to download this file")
+    # attachment.add_to_attachment("callback_id", "download_file")
 
-    message.send_message()
+    # action = Action("download", "Download", "button", "download")
 
-    response_data = SlashCommandResponse()
 
-    response_data.add_text("Message received")
+    # attachment.add_to_attachment("actions", [action.action])
 
-        
+    # message.add_to_message("attachments", [attachment.attachment])
 
-    return jsonify({"text":"Helloworld"})
+    
+
+
+    # message.send_message()
+
+    return ""
 
 @app.route("/printer", methods=["GET", "POST"])
 def printer():
@@ -45,3 +57,13 @@ def printer():
 
 
     return response_data.return_json()
+
+
+@app.route("/interactive", methods=["GET", "POST"])
+def interactive():
+
+    interacive_request = SlackRequest(request)
+
+    interacive_request.print_request()
+
+    return ""

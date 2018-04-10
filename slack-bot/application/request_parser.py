@@ -66,6 +66,9 @@ class EventRequest(SlackRequest):
 
         self.request = request.get_json()
 
+
+        self.challenge = self.find_from_form("challenge")
+
         self.token = self.find_from_form("token")
         self.team_id = self.find_from_form("team_id")
         self.api_app_id = self.find_from_form("api_app_id")
@@ -75,8 +78,9 @@ class EventRequest(SlackRequest):
         self.event_time = self.find_from_form("event_time")
         self.authed_users = self.find_from_form("authed_users")
 
-        if self.event["type"] == "file_shared":
-            self.event = FileShared(self.event)
+        if self.event:
+            if self.event["type"] == "file_shared":
+                self.event = FileShared(self.event)
     
 
 
