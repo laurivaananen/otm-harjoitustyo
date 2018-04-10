@@ -2,6 +2,7 @@ from application import app
 from flask import request, jsonify
 from application.request_parser import SlashCommandRequest, EventRequest, SlackRequest
 from application.response_parser import SlashCommandResponse, WebAPIMessage, Attachment, Action
+import requests
 
 import json
 import os
@@ -18,7 +19,36 @@ def index():
 
     request_data = SlackRequest(request)
 
-    request_data.print_request()
+    event = request_data.request["event"]
+
+    print("\n\nPrinting event items\n\n")
+    for key, value in event.items():
+        print("{}: {}".format(key, value))
+
+    print("\n\nPrinting file items\n\n")
+    for key, value in event["file"].items():
+        print("{}: {}".format(key, value))
+
+    if event and event["subtype"] == "file_share" and event["bot_id"] == None:
+        print("Found file_share event")
+
+    print("\n\nStarting to download file\n\n")
+
+    file_download = event["file"]["url_private_download"]
+    file_name = event["file"]["name"]
+
+    r = requests.get(file_download)
+
+    print(r.status_code)
+
+    dirpath = os.getcwd()
+
+    print("\n\n{}\n\n".format(dirpath))
+
+    with open('{}/downloads/{}'.format(dirpath, file_name), 'wb') as f:  
+        f.write(r.content)
+
+        
 
     # message = WebAPIMessage()
     # message.add_to_message("text", "Someone uploaded a file")
@@ -41,7 +71,7 @@ def index():
 
     # message.send_message()
 
-    return ""
+    return jsonify({"text":"Message received"})
 
 @app.route("/printer", methods=["GET", "POST"])
 def printer():

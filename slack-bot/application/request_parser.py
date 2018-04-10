@@ -35,6 +35,9 @@ class SlackRequest(object):
         for key, value in self.request.items():
             print("\n{}, {}".format(key, value))
 
+    def print_json(self):
+        print(json.dumps(self.request, indent=4, sort_keys=True))
+
 class FileShared(SlackRequest):
 
     def __init__(self, event):
