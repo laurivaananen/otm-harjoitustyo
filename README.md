@@ -26,11 +26,11 @@ Kopioi annettu https osoite. Tässä esimerkissä https://963dc340.ngrok.io
 
 Kloonaa tämä git repository omalle koneelle. Siirry kansioon slack-bot ja tee uusi virtuaaliympäristö ja aktivoi se.
 
-`lauri@ubuntu-pc:~/slackbot/otm-harjoitustyo/slack-bot$ python -m venv venv
+`lauri@ubuntu-pc:~/slackbot/otm-harjoitustyo/slack-bot$ python -m venv venv`
 
-lauri@ubuntu-pc:~/slackbot/otm-harjoitustyo/slack-bot$ source venv/bin/activate
+`lauri@ubuntu-pc:~/slackbot/otm-harjoitustyo/slack-bot$ source venv/bin/activate`
 
-(venv) lauri@ubuntu-pc:~/slackbot/otm-harjoitustyo/slack-bot$`
+`(venv) lauri@ubuntu-pc:~/slackbot/otm-harjoitustyo/slack-bot$`
 
 lataa vaadittavat lisäosat pip ohjelman avulla
 
@@ -62,7 +62,7 @@ Kopioi Bot User OAuth Access Token.
 
 Sulje ohjelma painamalla ctrl+c
 
-Lisää Bot User OAuth Access Token ympäristö muuttujaksi
+Lisää Bot User OAuth Access Token ympäristömuuttujaksi
 
 `(venv) lauri@ubuntu-pc:~/slackbot/otm-harjoitustyo/slack-bot$ export BOT_OAUTH=liitä-tähän-bot-user-oauth-token`
 
