@@ -60,7 +60,9 @@ def index():
 
         # message.send_message()
 
-        send_message(token="None", channel=request_channel, message=message_data)
+        send_message(token=os.environ["BOT_OAUTH"],
+                     channel=request_channel,
+                     message=message_data)
 
         return ""
 
