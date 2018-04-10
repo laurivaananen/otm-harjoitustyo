@@ -60,7 +60,7 @@ def index():
 
         # message.send_message()
 
-        send_message(token="xoxb-342429334896-SjycEDXh3bTFs6GOHTeEs1lg", channel=request_channel, message=message_data)
+        send_message(token="None", channel=request_channel, message=message_data)
 
         return ""
 
