@@ -7,3 +7,7 @@
 .vscode
 venv
 application/__pycache__
+.coverage
+application/.pytest_cache
+.pytest_cache
+htmlcov
