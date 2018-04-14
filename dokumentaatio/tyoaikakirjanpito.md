@@ -6,3 +6,5 @@
 |9.4|6|Toiminnallisuuden lisäämistä  |
 |10.4|6|Toiminnallisuuden lisäämistä  |
 |    |2|Dokumentaatiota   |
+|14.4|6|Testien kirjoittamista  |
+|Yht|24|  |

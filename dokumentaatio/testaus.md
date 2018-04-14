@@ -8,3 +8,7 @@ Aja kaikki testit kansiosta otm-harjoitustyo/slack-bot
 # Katso testi raportti
 
 ` chromium-browser htmlcov/index.html `
+
+# Aja testit ja tulosta terminaaliin
+
+` py.test --cov-report term-missing --cov=application test/ `

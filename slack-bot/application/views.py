@@ -4,6 +4,8 @@ from application.request_parser import SlashCommandRequest, EventRequest, SlackR
 from application.response_parser import SlashCommandResponse, WebAPIMessage, Attachment, Action
 import requests
 
+from application.request.request_parser import RequestParser
+
 import json
 import os
 
@@ -12,15 +14,11 @@ import os
 @app.route("/", methods=["GET", "POST"])
 def index():
 
-    request_data = SlackRequest(request)
+    request_parser = RequestParser(request)
+    request_parser.parse_content()
 
-    # print("\n\n\n")
-
-    # request_data.print_request()
-
-    # print("\n\n\n")
-
-    
+    if request_parser.find_from_json("type") == "url_verification":
+        return jsonify({"challenge":request_parser.find_from_json("challenge")})
 
 
     # print("\n\nPrinting event items\n\n")
@@ -39,34 +37,57 @@ def index():
 
     # Verificating slack bot integration
 
-    if request_data.request["type"] == "url_verification":
-        return jsonify({"challenge":request_data.request["challenge"]})
+    # if request_data.request["type"] == "url_verification":
+    #     return jsonify({"challenge":request_data.request["challenge"]})
 
 
     # If the request is a message and not from a bot, send a message
 
-    event = request_data.request["event"]
+    print("\n\n\n\n\n\n\n\n\n\n\n")
 
-    if event["type"] == "message" and not "bot_id" in event:
-        request_text = event["text"]
+    print(request_parser.body)
 
-        request_user = "<@{}>".format(event["user"])
+    if request_parser.find_from_json("event"):
+        print("RECIEVED A MESSAGE: {}".format(request_parser.body))
 
-        request_channel = event["channel"]
 
-        message = WebAPIMessage()
 
-        message_data = "User {} sent a message: {}".format(request_user, request_text)
 
-        message.add_to_message("text", message_data)
 
-        # message.send_message()
 
-        send_message(token=os.environ["BOT_OAUTH"],
-                     channel=request_channel,
-                     message=message_data)
 
-        return ""
+
+
+    # event = request_data.request["event"]
+
+    # if event["type"] == "message" and not "bot_id" in event:
+    #     request_text = event["text"]
+
+    #     request_user = "<@{}>".format(event["user"])
+
+    #     request_channel = event["channel"]
+
+    #     message = WebAPIMessage()
+
+    #     message_data = "User {} sent a message: {}".format(request_user, request_text)
+
+    #     message.add_to_message("text", message_data)
+
+    #     # message.send_message()
+
+    #     send_message(token=os.environ["BOT_OAUTH"],
+    #                  channel=request_channel,
+    #                  message=message_data)
+
+    #     return ""
+
+
+
+
+
+
+
+
 
     # event = request_data.request["event"]
 
