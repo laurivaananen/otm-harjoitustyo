@@ -6,6 +6,8 @@ Kurssille Ohjelmistotekniikan menetelmät.
 
 [Vaatimusmäärittely](/dokumentaatio/vaatimusmaarittely.md)
 
+[Testaus](/dokumentaatio/testaus.md)
+
 # Ohjelman asentaminen ja käyttäminen
 
 Tämä ohjelma on ohjelmoitu Pythonilla versio 3.6.3
