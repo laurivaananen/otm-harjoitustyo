@@ -1,8 +1,8 @@
 from application import app
 from flask import request, jsonify
-from application.request_parser import SlashCommandRequest, EventRequest, SlackRequest
-from application.response_parser import SlashCommandResponse, WebAPIMessage, Attachment, Action
 import requests
+
+from application import bot
 
 from application.request.request_parser import RequestParser
 from application.response.response_parser import JsonMessage
@@ -18,11 +18,7 @@ def index():
     request_parser = RequestParser(request)
     request_parser.parse_content()
 
-    print("\n\n\n\n\n\n\n\n\n\n\n")
-
-    print(json.dumps(request_parser.body, indent=4))
-
-    print("\n\n\n\n\n\n\n\n\n\n\n")
+    # print(json.dumps(request_parser.body, indent=4))
 
     
 
@@ -34,24 +30,37 @@ def index():
 
     message_event = request_parser.find_from_json("event")
 
-    if message_event["subtype"] and message_event["subtype"] == "file_share":
 
-        message_file = message_event["file"]
-        message_file_url = message_file["url_private"]
-        message_file_timestamp = message_file["timestamp"]
-        message_file_filetype = message_file["filetype"]
+    # Making sure a bot didn't send a message
+    if "bot_id" not in message_event.keys() or message_event["bot_id"] == None:
 
-        authorization_header = {"Authorization": "Bearer {}".format(os.environ["SLACK_OAUTH"])}
 
-        message = JsonMessage(headers=authorization_header)
-        response = message.send_message(url=message_file_url)
+        if "subtype" in message_event.keys() and message_event["subtype"] == "file_share":
+            print("\n\nFILE SHARE:\n{}".format(json.dumps(message_event, indent=4)))
+            bot.download_confirmation(message_event)
+            # bot.download_image(message_event)
 
-        if response:
-            dirpath = os.getcwd()
+        if "subtype" not in message_event.keys() and message_event["type"] == "message":
+            print("\n\nMESSAGE EVENT:\n{}".format(json.dumps(message_event, indent=4)))
+            bot.download_confirmation(message_event)
 
-            with open('{}/downloads/{}'.format(dirpath, "{}.{}".format(message_file_timestamp, message_file_filetype)), 'wb') as f:  
-                f.write(response.content)
-        
+
+
+    return ""
+
+
+@app.route("/component", methods=["GET" ,"POST"])
+def component():
+
+    request_parser = RequestParser(request)
+    request_parser.parse_content()
+
+    payload_json = json.loads(request_parser.body["payload"][0])
+
+    print("\n\nCOMPONEN PAYLOAD:\n{}".format(json.dumps(payload_json, indent=4)))
+
+    bot.download_confirmation_update(payload_json)
+
 
 
 
@@ -140,44 +149,44 @@ def index():
     # message.send_message()
     return ""
 
-@app.route("/printer", methods=["GET", "POST"])
-def printer():
+# @app.route("/printer", methods=["GET", "POST"])
+# def printer():
 
-    request_data = SlashCommandRequest(request)
+#     request_data = SlashCommandRequest(request)
 
-    request_data.print_request()
+#     request_data.print_request()
     
-    response_data = SlashCommandResponse()
+#     response_data = SlashCommandResponse()
 
-    response_data.add_text(request_data.text)
-
-
-
-    return response_data.return_json()
+#     response_data.add_text(request_data.text)
 
 
-@app.route("/interactive", methods=["GET", "POST"])
-def interactive():
 
-    interacive_request = SlackRequest(request)
-
-    interacive_request.print_request()
-
-    return ""
+#     return response_data.return_json()
 
 
-def send_message(token, channel, message):
+# @app.route("/interactive", methods=["GET", "POST"])
+# def interactive():
 
-    url = "https://slack.com/api/chat.postMessage"
+#     interacive_request = SlackRequest(request)
 
-    headers = {"Content-type":"application/json; charset=utf-8",
-               "Authorization":"Bearer {}".format(token)
-               }
+#     interacive_request.print_request()
 
-    data = {"channel":channel,
-            "text":message
-            }
+#     return ""
 
-    r = requests.post(url, headers=headers, json=data)
 
-    print(">>> {}, {}".format(r.status_code, r.text))
+# def send_message(token, channel, message):
+
+#     url = "https://slack.com/api/chat.postMessage"
+
+#     headers = {"Content-type":"application/json; charset=utf-8",
+#                "Authorization":"Bearer {}".format(token)
+#                }
+
+#     data = {"channel":channel,
+#             "text":message
+#             }
+
+#     r = requests.post(url, headers=headers, json=data)
+
+#     print(">>> {}, {}".format(r.status_code, r.text))

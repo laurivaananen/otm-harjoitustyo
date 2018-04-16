@@ -30,7 +30,7 @@ class RequestParser(object):
                 self.body = self.request_obj.get_json()
 
             elif self.headers["Content-Type"] == "application/x-www-form-urlencoded":
-                self.body = self.request_obj.form
+                self.body = self.request_obj.form.to_dict(flat=False)
 
             else:
                 self.body = None
