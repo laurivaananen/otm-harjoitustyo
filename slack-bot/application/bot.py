@@ -7,15 +7,8 @@ from datetime import datetime
 
 
 def download_image(url):
-    # message_file = message_event["file"]
-    # message_file_url = message_file["url_private"]
-    # message_file_timestamp = message_file["timestamp"]
-    # message_file_filetype = message_file["filetype"]
-
-    url = url
 
     datetime_now = datetime.now().strftime("%Y%m%d-%H%M%S")
-    # datetime_clean = datetime_now.strftime("%Y%m%D-%H%M%S")
 
     file_type = url.split(".")[-1]
 
@@ -23,6 +16,8 @@ def download_image(url):
     authorization_header = {"Authorization": "Bearer {}".format(os.environ["SLACK_OAUTH"])}
 
     message = JsonMessage(headers=authorization_header)
+
+    # File we got
     response = message.send_message(url=url)
 
     if response:
@@ -37,7 +32,6 @@ def download_confirmation(message_event):
     message_file_url = message_event["file"]["url_private"]
 
     headers = {"Authorization": "Bearer {}".format(os.environ["BOT_OAUTH"])}
-
     headers["Content-Type"] = "application/json; charset=utf-8"
 
     text = "<@{}> shared a file".format(message_user)
@@ -69,11 +63,8 @@ def download_confirmation(message_event):
 def download_confirmation_update(message_payload):
 
     original_message = message_payload["original_message"]["text"]
-
     message_file_url = message_payload["original_message"]["attachments"][0]["actions"][0]["value"]
-
     message_channel = message_payload["channel"]["id"]
-
     message_ts = message_payload["original_message"]["ts"]
 
     download_image(message_file_url)
