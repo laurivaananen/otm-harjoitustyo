@@ -63,7 +63,7 @@ if ('sendBeacon' in navigator) {
 <script>
 window.TSMark('step_load');
 </script>	
-		<noscript><meta http-equiv="refresh" content="0; URL=/?redir=%2Ffiles-pri%2FT9XLUHJUE-FA3LKG7BK%2Fdownload%2Fvakuutus.png&amp;nojsmode=1" /></noscript>
+		<noscript><meta http-equiv="refresh" content="0; URL=/?redir=%2Ffiles-pri%2FT9XLUHJUE-FA8FKPST1%2Fvakuutus.png&amp;nojsmode=1" /></noscript>
 
 
 		
@@ -143,7 +143,7 @@ window.TSMark('step_load');
 })();
 </script>
 
-	<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/webpack.manifest.dc54fc13693882b73ec2.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+	<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/webpack.manifest.e1a700838df19097ced6.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
 
 			
 	
@@ -175,7 +175,7 @@ window.TSMark('step_load');
 		e[d]=e[d]||function(){(e[d].q=e[d].q||[]).push([1*new Date(),arguments])};
 		e[d].l=1*new Date();g=c.createElement(b);a=c.getElementsByTagName(b)[0];
 		g.async=1;g.src=f;a.parentNode.insertBefore(g,a)
-		})(window,document,"script","https://a.slack-edge.com/bv1-1/slack_beacon.5dbbc3dd9f37d8bc2f4e.min.js","sb");
+		})(window,document,"script","https://a.slack-edge.com/bv1-2/slack_beacon.5dbbc3dd9f37d8bc2f4e.min.js","sb");
 		sb('set', 'token', '3307f436963e02d4f9eb85ce5159744c');
 
 				sb('track', 'pageview');
@@ -368,7 +368,7 @@ if ('rendererEvalAsync' in window) {
     <link href="https://a.slack-edge.com/1c122/style/rollup-slack_kit_legacy_adapters.css" rel="stylesheet" type="text/css" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)">
 
 			<!-- output_css "core" -->
-    <link href="https://a.slack-edge.com/8c849/style/rollup-plastic.css" rel="stylesheet" type="text/css" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)">
+    <link href="https://a.slack-edge.com/5956/style/rollup-plastic.css" rel="stylesheet" type="text/css" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)">
 
 		<!-- output_css "before_file_pages" -->
 
@@ -381,7 +381,7 @@ if ('rendererEvalAsync' in window) {
 	<!-- output_css "regular" -->
     <link href="https://a.slack-edge.com/e9fbd/style/signin.css" rel="stylesheet" type="text/css" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)">
     <link href="https://a.slack-edge.com/f1c35/style/index.css" rel="stylesheet" type="text/css" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)">
-    <link href="https://a.slack-edge.com/5e83b/style/libs/lato-2-compressed.css" rel="stylesheet" type="text/css" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)">
+    <link href="https://a.slack-edge.com/cbc02/style/libs/lato-2-compressed.css" rel="stylesheet" type="text/css" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)">
     <link href="https://a.slack-edge.com/875b8/style/sticky_nav.css" rel="stylesheet" type="text/css" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)">
     <link href="https://a.slack-edge.com/5759/style/footer.css" rel="stylesheet" type="text/css" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)">
 
@@ -505,8 +505,8 @@ if ('rendererEvalAsync' in window) {
 	<div class="col span_4_of_6 float_none margin_auto signin_card">
 		<form id="signin_form" action="/" method="post" accept-encoding="UTF-8">
 			<input type="hidden" name="signin" value="1">
-			<input type="hidden" name="redir" value="/files-pri/T9XLUHJUE-FA3LKG7BK/download/vakuutus.png">
-						<input type="hidden" name="crumb" value="s-1523368940-04c60fe4ef0ad83084786858c8646ced84b3c9d0f8f8a7574ffc249bb5162c5a-☃" />
+			<input type="hidden" name="redir" value="/files-pri/T9XLUHJUE-FA8FKPST1/vakuutus.png">
+						<input type="hidden" name="crumb" value="s-1523884397-d83ac1e206f3575ef511d31b6bf32c84a12f8c8e2d0f4567f81c8f3cc3052b5b-☃" />
 
 			<p class="browser_password align_left">Enter your <strong>email address</strong> and <strong>password</strong>.</p>
 			<p class="ssb_password hidden">What is your <strong>password</strong>?</p>
@@ -541,7 +541,7 @@ if ('rendererEvalAsync' in window) {
 			 <p class="large_bottom_margin"><strong>Long password? Hard to type?</strong><br /> We can email you a magic link so you can sign in without having to type your password.</p>
 
 			<form id="magic_login" action="/" method="post" accept-encoding="UTF-8" class="align_center float_none margin_auto medium_bottom_margin">
-				<input type="hidden" name="crumb" value="s-1523368940-04c60fe4ef0ad83084786858c8646ced84b3c9d0f8f8a7574ffc249bb5162c5a-☃" />
+				<input type="hidden" name="crumb" value="s-1523884397-d83ac1e206f3575ef511d31b6bf32c84a12f8c8e2d0f4567f81c8f3cc3052b5b-☃" />
 				<input type="hidden" name="email">
 				<input type="hidden" name="signin_request_magiclogin" value="1">
 				<button class="btn btn_large btn_outline full_width"><ts-icon class="ts_icon_magic"></ts-icon>Email Me A Link</button>
@@ -689,10 +689,10 @@ if ('rendererEvalAsync' in window) {
 		app: "web",
 		user_id: '',
 		team_id: 'T00',
-		visitor_uid: "cx8uzd47szwogw8gs4g08kc4g",
+		visitor_uid: "1le8bg4hbxggg0wk88sk4o4o0",
 		no_login: true,
-		version_ts: "1523365876",
-		version_uid: "6b959377ea309e2567c89c8bcafb693911e8dc83",
+		version_ts: "1523844553",
+		version_uid: "c441439078b19503b22f9bac74f052089e779ef7",
 		cache_version: "v16-giraffe",
 		cache_ts_version: "v2-bunny",
 		redir_domain: "slack-redir.net",
@@ -710,124 +710,124 @@ if ('rendererEvalAsync' in window) {
 
 		vvv_paths: {
 			
-		lz_string: "https:\/\/a.slack-edge.com\/bv1-1\/lz-string-1.4.4.worker.8de1b00d670ff3dc706a0.js",
-		codemirror: "https:\/\/a.slack-edge.com\/bv1-1\/codemirror.min.44a2b0ae2d7a5cac8a95.min.js",
-	codemirror_addon_simple: "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_simple.9c76f7896754967b9eda.min.js",
-	codemirror_load: "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_load.5afece10ceabb3d91968.min.js",
+		lz_string: "https:\/\/a.slack-edge.com\/bv1-2\/lz-string-1.4.4.worker.8de1b00d670ff3dc706a0.js",
+		codemirror: "https:\/\/a.slack-edge.com\/bv1-2\/codemirror.min.44a2b0ae2d7a5cac8a95.min.js",
+	codemirror_addon_simple: "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_simple.9c76f7896754967b9eda.min.js",
+	codemirror_load: "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_load.5afece10ceabb3d91968.min.js",
 
 	// Silly long list of every possible file that Codemirror might load
 	codemirror_files: {
-		'apl': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_apl.28ce658730a18a115532.min.js",
-		'asciiarmor': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_asciiarmor.b6cae5185b1e92ac1917.min.js",
-		'asn.1': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_asn.1.1992736a46ff4b01f93f.min.js",
-		'asterisk': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_asterisk.8dc14a25826407ab1fa3.min.js",
-		'brainfuck': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_brainfuck.d29773c7ac178228d4c1.min.js",
-		'clike': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_clike.cccd21c94a2b7ab7ce3d.min.js",
-		'clojure': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_clojure.4a91a0c50a64467f2ff5.min.js",
-		'cmake': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_cmake.a873ff1604fb8e89955f.min.js",
-		'cobol': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_cobol.2b7098fad4936f18f361.min.js",
-		'coffeescript': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_coffeescript.68a8fdd315d0dcf8c27a.min.js",
-		'commonlisp': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_commonlisp.879f5b578b25a058fc4d.min.js",
-		'css': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_css.035ca224464953138c30.min.js",
-		'crystal': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_crystal.79beb330be1a294e43c4.min.js",
-		'cypher': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_cypher.525ea24cf7710ac2825a.min.js",
-		'd': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_d.7328ff9ab8c98103deb7.min.js",
-		'dart': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_dart.f7e22fcf397d31e7af93.min.js",
-		'diff': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_diff.c3b6cf00600144071d6d.min.js",
-		'django': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_django.cde302c62fe6365529f2.min.js",
-		'dockerfile': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_dockerfile.ed0e37e03b2023e1b69b.min.js",
-		'dtd': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_dtd.df3795754645134d5f80.min.js",
-		'dylan': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_dylan.fed72f1d0e846fd6d213.min.js",
-		'ebnf': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_ebnf.6af113fdedf587f96c64.min.js",
-		'ecl': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_ecl.12b9206b24a5433649ab.min.js",
-		'eiffel': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_eiffel.896ceb473406cc01ee59.min.js",
-		'elm': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_elm.637ce7bda68e33c4b55a.min.js",
-		'erlang': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_erlang.ea42edc0caacbb7b9429.min.js",
-		'factor': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_factor.937f3b4ba675a2abe9c7.min.js",
-		'forth': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_forth.89f6ec54d5548d4cf25b.min.js",
-		'fortran': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_fortran.e312d7972b690a22beab.min.js",
-		'gas': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_gas.abc6e9d7c3a0b887ff69.min.js",
-		'gfm': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_gfm.8fc0c8e3735d10a858c6.min.js",
-		'gherkin': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_gherkin.9e0cfa25c1965e495419.min.js",
-		'go': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_go.5ed96d85ab19d7795ba7.min.js",
-		'groovy': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_groovy.c496c31bd5cca0986ead.min.js",
-		'haml': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_haml.f25c65cf09f1ec3a29c7.min.js",
-		'handlebars': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_handlebars.80eb7b9e2e0fb6dee382.min.js",
-		'haskell': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_haskell.e7b2cc288c6bd281ff32.min.js",
-		'haxe': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_haxe.3efebdfa3dc7fb7cc4db.min.js",
-		'htmlembedded': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_htmlembedded.1a2496c621f9a470c340.min.js",
-		'htmlmixed': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_htmlmixed.caa675603dc4fdb90c31.min.js",
-		'http': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_http.c1c249d14bf18521fee1.min.js",
-		'idl': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_idl.715601d44fbe133c065b.min.js",
-		'jade': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_jade.0eff9474d977d43feced.min.js",
-		'javascript': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_javascript.bc1b5c6a6515b3064108.min.js",
-		'jinja2': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_jinja2.5de8bc52face9b2769f2.min.js",
-		'julia': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_julia.32d8748fecc17e6305bf.min.js",
-		'livescript': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_livescript.f6dbad1e8d8168b319f4.min.js",
-		'lua': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_lua.32780d85e5cbbb59b8eb.min.js",
-		'markdown': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_markdown.a7f65f93ece1f31b9e60.min.js",
-		'mathematica': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_mathematica.48dd3694f2f71a75544c.min.js",
-		'mirc': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_mirc.0f3984162d72c3a0a5ca.min.js",
-		'mllike': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_mllike.e4e86126535bd4f7a575.min.js",
-		'modelica': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_modelica.d4fd8938619f5c8dc361.min.js",
-		'mscgen': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_mscgen.f9d5ab8e95b697c39880.min.js",
-		'mumps': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_mumps.b361377133b59678d3d5.min.js",
-		'nginx': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_nginx.524bfc39589c37f74bfd.min.js",
-		'nsis': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_nsis.b25852c3418f984ae03d.min.js",
-		'ntriples': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_ntriples.4e0443a64025c35438a6.min.js",
-		'octave': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_octave.3a0c99a5e07bbd9a6d67.min.js",
-		'oz': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_oz.e9939d375a47087f59aa.min.js",
-		'pascal': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_pascal.f1162aeab4a781363ccd.min.js",
-		'pegjs': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_pegjs.7af50308b76ba3251b02.min.js",
-		'perl': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_perl.5a7940afe30ba510820a.min.js",
-		'php': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_php.64b619fb529d1cd9b781.min.js",
-		'pig': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_pig.a30ec6f3ffff33476ac4.min.js",
-		'powershell': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_powershell.0ccd1b6a33eb2209c15b.min.js",
-		'properties': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_properties.5c0c1436978bf2a7af00.min.js",
-		'puppet': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_puppet.53ac0d4fadd68369610e.min.js",
-		'python': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_python.dd3e2e25db7e7fb868d6.min.js",
-		'q': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_q.4af8c1d9b07ea218977f.min.js",
-		'r': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_r.783001720b360a8177a8.min.js",
-		'rpm': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_rpm.79678546fb25c75e3208.min.js",
-		'rst': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_rst.0fa19c56ae79c0b70c27.min.js",
-		'ruby': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_ruby.efce7fd348530776314b.min.js",
-		'rust': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_rust.b148ea62a65dfe9f36c0.min.js",
-		'sass': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_sass.4e58ddf440975d3864f6.min.js",
-		'scheme': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_scheme.52a48304089db7f7708e.min.js",
-		'shell': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_shell.8dd47832ce011f080fb8.min.js",
-		'sieve': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_sieve.dc92cd9b919e5efb3c05.min.js",
-		'slim': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_slim.ba0d300bced932d16420.min.js",
-		'smalltalk': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_smalltalk.6dd6e1d419b04500b385.min.js",
-		'smarty': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_smarty.428329a9fdb0d8be2a5f.min.js",
-		'solr': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_solr.02f1fe78feb4a670b6cc.min.js",
-		'soy': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_soy.8145a09e761fee4b0667.min.js",
-		'sparql': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_sparql.cf7a2190284c6ca0c11d.min.js",
-		'spreadsheet': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_spreadsheet.eeeb35132617f7fa05e6.min.js",
-		'sql': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_sql.78a665f0a117e62e46f2.min.js",
-		'stex': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_stex.777bff71a93e84be5096.min.js",
-		'stylus': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_stylus.6ae0e46fb8c0750c644c.min.js",
-		'swift': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_swift.2254c736e8a7f4f51e92.min.js",
-		'tcl': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_tcl.13833d90818d7aa20cc6.min.js",
-		'textile': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_textile.aa7de5d427d0474f6e14.min.js",
-		'tiddlywiki': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_tiddlywiki.efa88c874dc2653bb47e.min.js",
-		'tiki': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_tiki.6a8e59872a533ec09dae.min.js",
-		'toml': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_toml.4e099e2ec0d834eb7c04.min.js",
-		'tornado': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_tornado.feede7e509e683f0998f.min.js",
-		'troff': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_troff.d31a17f22f8c679cf3e5.min.js",
-		'ttcn': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_ttcn.1bf6637cf05b45897ccd.min.js",
-		'ttcn:cfg': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_ttcn-cfg.273e541df1ddc66215ca.min.js",
-		'turtle': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_turtle.4cf803c3d74096bfb82a.min.js",
-		'twig': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_twig.628d79da0aea153a66fe.min.js",
-		'vb': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_vb.828b80361395c4e24aaf.min.js",
-		'vbscript': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_vbscript.e19473b2883a8f5e9270.min.js",
-		'velocity': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_velocity.09039c2d8f038c5046b2.min.js",
-		'verilog': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_verilog.f12abef9991c95696bf5.min.js",
-		'vhdl': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_vhdl.6438b130790bb71537f5.min.js",
-		'vue': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_vue.b7dca682b49e1cb360cf.min.js",
-		'xml': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_xml.c067158d12d43b9b96f7.min.js",
-		'xquery': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_xquery.340466967c2bdf65fa66.min.js",
-		'yaml': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_yaml.7f71c0f462159ba81033.min.js",
-		'z80': "https:\/\/a.slack-edge.com\/bv1-1\/codemirror_lang_z80.73d5eb24ebcdece24ced.min.js"
+		'apl': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_apl.28ce658730a18a115532.min.js",
+		'asciiarmor': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_asciiarmor.b6cae5185b1e92ac1917.min.js",
+		'asn.1': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_asn.1.1992736a46ff4b01f93f.min.js",
+		'asterisk': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_asterisk.8dc14a25826407ab1fa3.min.js",
+		'brainfuck': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_brainfuck.d29773c7ac178228d4c1.min.js",
+		'clike': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_clike.cccd21c94a2b7ab7ce3d.min.js",
+		'clojure': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_clojure.4a91a0c50a64467f2ff5.min.js",
+		'cmake': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_cmake.a873ff1604fb8e89955f.min.js",
+		'cobol': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_cobol.2b7098fad4936f18f361.min.js",
+		'coffeescript': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_coffeescript.68a8fdd315d0dcf8c27a.min.js",
+		'commonlisp': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_commonlisp.879f5b578b25a058fc4d.min.js",
+		'css': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_css.035ca224464953138c30.min.js",
+		'crystal': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_crystal.79beb330be1a294e43c4.min.js",
+		'cypher': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_cypher.525ea24cf7710ac2825a.min.js",
+		'd': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_d.7328ff9ab8c98103deb7.min.js",
+		'dart': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_dart.f7e22fcf397d31e7af93.min.js",
+		'diff': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_diff.c3b6cf00600144071d6d.min.js",
+		'django': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_django.cde302c62fe6365529f2.min.js",
+		'dockerfile': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_dockerfile.ed0e37e03b2023e1b69b.min.js",
+		'dtd': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_dtd.df3795754645134d5f80.min.js",
+		'dylan': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_dylan.fed72f1d0e846fd6d213.min.js",
+		'ebnf': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_ebnf.6af113fdedf587f96c64.min.js",
+		'ecl': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_ecl.12b9206b24a5433649ab.min.js",
+		'eiffel': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_eiffel.896ceb473406cc01ee59.min.js",
+		'elm': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_elm.637ce7bda68e33c4b55a.min.js",
+		'erlang': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_erlang.ea42edc0caacbb7b9429.min.js",
+		'factor': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_factor.937f3b4ba675a2abe9c7.min.js",
+		'forth': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_forth.89f6ec54d5548d4cf25b.min.js",
+		'fortran': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_fortran.e312d7972b690a22beab.min.js",
+		'gas': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_gas.abc6e9d7c3a0b887ff69.min.js",
+		'gfm': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_gfm.8fc0c8e3735d10a858c6.min.js",
+		'gherkin': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_gherkin.9e0cfa25c1965e495419.min.js",
+		'go': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_go.5ed96d85ab19d7795ba7.min.js",
+		'groovy': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_groovy.c496c31bd5cca0986ead.min.js",
+		'haml': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_haml.f25c65cf09f1ec3a29c7.min.js",
+		'handlebars': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_handlebars.80eb7b9e2e0fb6dee382.min.js",
+		'haskell': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_haskell.e7b2cc288c6bd281ff32.min.js",
+		'haxe': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_haxe.3efebdfa3dc7fb7cc4db.min.js",
+		'htmlembedded': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_htmlembedded.1a2496c621f9a470c340.min.js",
+		'htmlmixed': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_htmlmixed.caa675603dc4fdb90c31.min.js",
+		'http': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_http.c1c249d14bf18521fee1.min.js",
+		'idl': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_idl.715601d44fbe133c065b.min.js",
+		'jade': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_jade.0eff9474d977d43feced.min.js",
+		'javascript': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_javascript.bc1b5c6a6515b3064108.min.js",
+		'jinja2': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_jinja2.5de8bc52face9b2769f2.min.js",
+		'julia': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_julia.32d8748fecc17e6305bf.min.js",
+		'livescript': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_livescript.f6dbad1e8d8168b319f4.min.js",
+		'lua': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_lua.32780d85e5cbbb59b8eb.min.js",
+		'markdown': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_markdown.a7f65f93ece1f31b9e60.min.js",
+		'mathematica': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_mathematica.48dd3694f2f71a75544c.min.js",
+		'mirc': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_mirc.0f3984162d72c3a0a5ca.min.js",
+		'mllike': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_mllike.e4e86126535bd4f7a575.min.js",
+		'modelica': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_modelica.d4fd8938619f5c8dc361.min.js",
+		'mscgen': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_mscgen.f9d5ab8e95b697c39880.min.js",
+		'mumps': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_mumps.b361377133b59678d3d5.min.js",
+		'nginx': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_nginx.524bfc39589c37f74bfd.min.js",
+		'nsis': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_nsis.b25852c3418f984ae03d.min.js",
+		'ntriples': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_ntriples.4e0443a64025c35438a6.min.js",
+		'octave': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_octave.3a0c99a5e07bbd9a6d67.min.js",
+		'oz': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_oz.e9939d375a47087f59aa.min.js",
+		'pascal': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_pascal.f1162aeab4a781363ccd.min.js",
+		'pegjs': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_pegjs.7af50308b76ba3251b02.min.js",
+		'perl': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_perl.5a7940afe30ba510820a.min.js",
+		'php': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_php.64b619fb529d1cd9b781.min.js",
+		'pig': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_pig.a30ec6f3ffff33476ac4.min.js",
+		'powershell': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_powershell.0ccd1b6a33eb2209c15b.min.js",
+		'properties': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_properties.5c0c1436978bf2a7af00.min.js",
+		'puppet': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_puppet.53ac0d4fadd68369610e.min.js",
+		'python': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_python.dd3e2e25db7e7fb868d6.min.js",
+		'q': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_q.4af8c1d9b07ea218977f.min.js",
+		'r': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_r.783001720b360a8177a8.min.js",
+		'rpm': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_rpm.79678546fb25c75e3208.min.js",
+		'rst': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_rst.0fa19c56ae79c0b70c27.min.js",
+		'ruby': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_ruby.efce7fd348530776314b.min.js",
+		'rust': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_rust.b148ea62a65dfe9f36c0.min.js",
+		'sass': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_sass.4e58ddf440975d3864f6.min.js",
+		'scheme': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_scheme.52a48304089db7f7708e.min.js",
+		'shell': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_shell.8dd47832ce011f080fb8.min.js",
+		'sieve': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_sieve.dc92cd9b919e5efb3c05.min.js",
+		'slim': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_slim.ba0d300bced932d16420.min.js",
+		'smalltalk': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_smalltalk.6dd6e1d419b04500b385.min.js",
+		'smarty': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_smarty.428329a9fdb0d8be2a5f.min.js",
+		'solr': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_solr.02f1fe78feb4a670b6cc.min.js",
+		'soy': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_soy.8145a09e761fee4b0667.min.js",
+		'sparql': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_sparql.cf7a2190284c6ca0c11d.min.js",
+		'spreadsheet': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_spreadsheet.eeeb35132617f7fa05e6.min.js",
+		'sql': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_sql.78a665f0a117e62e46f2.min.js",
+		'stex': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_stex.777bff71a93e84be5096.min.js",
+		'stylus': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_stylus.6ae0e46fb8c0750c644c.min.js",
+		'swift': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_swift.2254c736e8a7f4f51e92.min.js",
+		'tcl': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_tcl.13833d90818d7aa20cc6.min.js",
+		'textile': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_textile.aa7de5d427d0474f6e14.min.js",
+		'tiddlywiki': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_tiddlywiki.efa88c874dc2653bb47e.min.js",
+		'tiki': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_tiki.6a8e59872a533ec09dae.min.js",
+		'toml': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_toml.4e099e2ec0d834eb7c04.min.js",
+		'tornado': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_tornado.feede7e509e683f0998f.min.js",
+		'troff': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_troff.d31a17f22f8c679cf3e5.min.js",
+		'ttcn': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_ttcn.1bf6637cf05b45897ccd.min.js",
+		'ttcn:cfg': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_ttcn-cfg.273e541df1ddc66215ca.min.js",
+		'turtle': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_turtle.4cf803c3d74096bfb82a.min.js",
+		'twig': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_twig.628d79da0aea153a66fe.min.js",
+		'vb': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_vb.828b80361395c4e24aaf.min.js",
+		'vbscript': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_vbscript.e19473b2883a8f5e9270.min.js",
+		'velocity': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_velocity.09039c2d8f038c5046b2.min.js",
+		'verilog': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_verilog.f12abef9991c95696bf5.min.js",
+		'vhdl': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_vhdl.6438b130790bb71537f5.min.js",
+		'vue': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_vue.b7dca682b49e1cb360cf.min.js",
+		'xml': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_xml.c067158d12d43b9b96f7.min.js",
+		'xquery': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_xquery.340466967c2bdf65fa66.min.js",
+		'yaml': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_yaml.7f71c0f462159ba81033.min.js",
+		'z80': "https:\/\/a.slack-edge.com\/bv1-2\/codemirror_lang_z80.73d5eb24ebcdece24ced.min.js"
 	}		},
 
 		notification_sounds: [{"value":"b2.mp3","label":"Ding","url":"https:\/\/slack.global.ssl.fastly.net\/7e91\/sounds\/push\/b2.mp3","url_ogg":"https:\/\/slack.global.ssl.fastly.net\/46ebb\/sounds\/push\/b2.ogg"},{"value":"animal_stick.mp3","label":"Boing","url":"https:\/\/slack.global.ssl.fastly.net\/7e91\/sounds\/push\/animal_stick.mp3","url_ogg":"https:\/\/slack.global.ssl.fastly.net\/46ebb\/sounds\/push\/animal_stick.ogg"},{"value":"been_tree.mp3","label":"Drop","url":"https:\/\/slack.global.ssl.fastly.net\/7e91\/sounds\/push\/been_tree.mp3","url_ogg":"https:\/\/slack.global.ssl.fastly.net\/46ebb\/sounds\/push\/been_tree.ogg"},{"value":"complete_quest_requirement.mp3","label":"Ta-da","url":"https:\/\/slack.global.ssl.fastly.net\/7e91\/sounds\/push\/complete_quest_requirement.mp3","url_ogg":"https:\/\/slack.global.ssl.fastly.net\/46ebb\/sounds\/push\/complete_quest_requirement.ogg"},{"value":"confirm_delivery.mp3","label":"Plink","url":"https:\/\/slack.global.ssl.fastly.net\/7e91\/sounds\/push\/confirm_delivery.mp3","url_ogg":"https:\/\/slack.global.ssl.fastly.net\/46ebb\/sounds\/push\/confirm_delivery.ogg"},{"value":"flitterbug.mp3","label":"Wow","url":"https:\/\/slack.global.ssl.fastly.net\/7e91\/sounds\/push\/flitterbug.mp3","url_ogg":"https:\/\/slack.global.ssl.fastly.net\/46ebb\/sounds\/push\/flitterbug.ogg"},{"value":"here_you_go_lighter.mp3","label":"Here you go","url":"https:\/\/slack.global.ssl.fastly.net\/7e91\/sounds\/push\/here_you_go_lighter.mp3","url_ogg":"https:\/\/slack.global.ssl.fastly.net\/46ebb\/sounds\/push\/here_you_go_lighter.ogg"},{"value":"hi_flowers_hit.mp3","label":"Hi","url":"https:\/\/slack.global.ssl.fastly.net\/7e91\/sounds\/push\/hi_flowers_hit.mp3","url_ogg":"https:\/\/slack.global.ssl.fastly.net\/46ebb\/sounds\/push\/hi_flowers_hit.ogg"},{"value":"knock_brush.mp3","label":"Knock Brush","url":"https:\/\/slack.global.ssl.fastly.net\/7e91\/sounds\/push\/knock_brush.mp3","url_ogg":"https:\/\/slack.global.ssl.fastly.net\/46ebb\/sounds\/push\/knock_brush.ogg"},{"value":"save_and_checkout.mp3","label":"Whoa!","url":"https:\/\/slack.global.ssl.fastly.net\/7e91\/sounds\/push\/save_and_checkout.mp3","url_ogg":"https:\/\/slack.global.ssl.fastly.net\/46ebb\/sounds\/push\/save_and_checkout.ogg"},{"value":"item_pickup.mp3","label":"Yoink","url":"https:\/\/slack.global.ssl.fastly.net\/7e91\/sounds\/push\/item_pickup.mp3","url_ogg":"https:\/\/slack.global.ssl.fastly.net\/46ebb\/sounds\/push\/item_pickup.ogg"},{"value":"hummus.mp3","label":"Hummus","url":"https:\/\/slack.global.ssl.fastly.net\/7fa9\/sounds\/push\/hummus.mp3","url_ogg":"https:\/\/slack.global.ssl.fastly.net\/46ebb\/sounds\/push\/hummus.ogg"},{"value":"none","label":"None"}],
@@ -849,6 +849,7 @@ if ('rendererEvalAsync' in window) {
 		feature_deprecate_get_member_by_name: false,
 		feature_modern_set_last_read: true,
 		feature_modern_process_imsg: false,
+		feature_react_threads: false,
 		feature_modern_message_changed: false,
 		feature_file_threads: false,
 		feature_file_threads_dark_launch: false,
@@ -869,11 +870,13 @@ if ('rendererEvalAsync' in window) {
 		feature_custom_status_expiry: false,
 		feature_m11n_custom_status_input: false,
 		feature_m11n_channel_rtm_handlers: false,
+		feature_modern_rtm_handlers_go_first: true,
 		feature_sonic_dnd: false,
+		feature_sonic_rtm_message_replied: false,
+		feature_sonic_rtm_marked_events: false,
 		feature_enterprise_app_teams: true,
 		feature_enterprise_frecency: true,
 		feature_ent_app_management_dashboard: true,
-		feature_set_away_dialog_behavior: true,
 		feature_ent_app_management_restriction: false,
 		feature_entitlements: true,
 		feature_grid_archive_link_fixes: true,
@@ -894,12 +897,14 @@ if ('rendererEvalAsync' in window) {
 		feature_saml_authn_key_expiry_date: true,
 		feature_wta_client_support: true,
 		feature_xoxa_channel_authorization: true,
-		feature_wta_optional_ephemeral_message: false,
+		feature_wta_optional_ephemeral_message: true,
 		feature_file_links_betterer: false,
 		feature_enterprise_dm_deeplink: false,
 		feature_session_duration_saved_message: false,
 		feature_guest_api_changes: false,
+		feature_gdpr_exports: false,
 		feature_sso_jit_disabling: true,
+		feature_guest_private_channels: true,
 		feature_connecting_shared_channels_enterprise: false,
 		feature_shared_channels_enterprise: false,
 		feature_snapshots_the_revenge: false,
@@ -908,6 +913,7 @@ if ('rendererEvalAsync' in window) {
 		feature_deprecate_gateways: true,
 		feature_conversations_list: true,
 		feature_gdpr_user_join_tos: false,
+		feature_modernize_invites: false,
 		feature_modernize_admin: false,
 		feature_winssb_beta_channel: false,
 		feature_slack_astronaut_i18n_jpn: true,
@@ -936,6 +942,7 @@ if ('rendererEvalAsync' in window) {
 		feature_decomp_misc_reads: false,
 		feature_modernize_slash_cmds: false,
 		feature_i18n_escape: false,
+		feature_channel_type_order: false,
 		feature_i18n_runtime_translations: false,
 		feature_channel_exports: false,
 		feature_corp_eng_news: false,
@@ -944,10 +951,10 @@ if ('rendererEvalAsync' in window) {
 		feature_texty_rewrite_on_paste: false,
 		feature_deprecate_screenhero: true,
 		feature_calls_esc_ui: true,
+		feature_calls_unsupported_client_strings: false,
 		feature_toggle_id_translation: true,
-		feature_modern_api_q: true,
+		feature_modern_api_q: false,
 		feature_default_shared_channels: true,
-		feature_default_shared_channels_whats_new: true,
 		feature_email_notifications_improvements: true,
 		feature_react_lfs: false,
 		feature_log_quickswitcher_queries: true,
@@ -975,13 +982,11 @@ if ('rendererEvalAsync' in window) {
 		feature_prefs_modernization: false,
 		feature_sidebar_filters: false,
 		feature_sli_channel_archive_suggestions: true,
-		feature_unread_counts_without_history: true,
 		feature_react_messages: true,
 		feature_clipboard_contents: true,
 		feature_hide_unfurl_urls: false,
 		feature_redux_modals: false,
 		feature_react_pin_author: true,
-		feature_m11n_channels_join: true,
 		feature_growls_m11n: false,
 		feature_growls_m11n_prod: false,
 		feature_m11n_metrics_responsiveness: true,
@@ -1015,27 +1020,24 @@ if ('rendererEvalAsync' in window) {
 		feature_app_space: true,
 		feature_app_canvases: false,
 		feature_canvases: false,
+		feature_attachments_v2: false,
 		feature_stop_loud_channel_mentions: false,
 		feature_message_input_byte_limit: false,
 		feature_beacon_js_errors: false,
 		feature_http_sendmsg: false,
 		feature_app_dialogs_textarea_count: true,
-		feature_dialogs_v2_mobile: false,
+		feature_dialogs_v2_mobile: true,
 		feature_user_app_disable_speed_bump: false,
 		feature_nudge_team_creators: false,
 		feature_onedrive_picker: false,
 		feature_lesson_onboarding: true,
 		feature_disable_join_notifications: false,
 		feature_api_admin_page_not_ent: true,
-		feature_faster_channels_browser_render: true,
 		feature_non_blocking_user_boot: true,
-		feature_non_wasted_flannel_connection: true,
 		feature_no_files_info: true,
 		feature_less_pins: true,
 		feature_runaway_qs: true,
-		feature_dark_qs: false,
-		feature_no_frecency_storage: true,
-		feature_typeless_upsert_channel: false,
+		feature_typeless_upsert_channel: true,
 		feature_delete_team_and_apps: true,
 		feature_email_forwarding: true,
 		feature_pjpeg: false,
@@ -1073,7 +1075,7 @@ if ('rendererEvalAsync' in window) {
 		feature_quill_upgrade: true,
 		feature_offline_hint: false,
 		feature_aria_msg_summary: false,
-		feature_emoji_substr_search_tweaks: false,
+		feature_emoji_substr_search_tweaks: true,
 		feature_texty_formatting_commands: false,
 		feature_texty_change_queue: false,
 		feature_send_button_for_everyone: false,
@@ -1148,37 +1150,37 @@ if ('rendererEvalAsync' in window) {
 
 		
 	<!-- output_js "libs" -->
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/emoji_5.f765b7e9a668291cfd7b.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/rollup-core_required_libs.c0dc38f60627b10d1857.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/emoji_5.f765b7e9a668291cfd7b.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/rollup-core_required_libs.c0dc38f60627b10d1857.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
 
 	<!-- output_js "application" -->
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/modern.vendor.8cca869fdd245be4693e.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/application.637c7b2de3cae53a11e6.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/modern.vendor.b29c7ed3698751cc0206.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/application.5b1d45c7efb6b0ec32dd.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
 
 	<!-- output_js "page" -->
 
 		<!-- output_js "core" -->
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/rollup-core_required_ts.6bb3a1ecc74f453613c0.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/TS.web.c26817630f334be92695.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/signals.224faae8b29600405855.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/rollup-core_required_ts.1f03fb73ae11d80dea05.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/TS.web.fe4037b3ac80e341cf6f.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/signals.224faae8b29600405855.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
 
 	<!-- output_js "core_web" -->
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/rollup-core_web.1143ba1e81bc299b8a51.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/rollup-core_web.1143ba1e81bc299b8a51.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
 
 	<!-- output_js "secondary" -->
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.bcae6998079141b7146e.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/rollup-secondary_b_required.8266e43005c1d47c33bd.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/rollup-secondary_a_required.21e34e4bb3f5940891a1.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/rollup-secondary_b_required.95530d2ec630bd887e30.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
 
 				
 	
 	<script type="text/javascript">TS.boot(boot_data);</script>
 
 	<!-- output_js "regular" -->
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/sticky_nav.f3e5d3f5201730db38d8.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/warn_capslock.e3fce2fe58977d4811e7.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/spin.749a1a852d3b17985a6b.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/ladda.47f0b0a3f70f3894aec8.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
-<script type="text/javascript" src="https://a.slack-edge.com/bv1-1/footer.fc6c556e22abc288b9f4.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/sticky_nav.f3e5d3f5201730db38d8.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/warn_capslock.e3fce2fe58977d4811e7.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/spin.749a1a852d3b17985a6b.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/ladda.47f0b0a3f70f3894aec8.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
+<script type="text/javascript" src="https://a.slack-edge.com/bv1-2/footer.fc6c556e22abc288b9f4.min.js" crossorigin="anonymous" onload="window._cdn && _cdn.ok(this, arguments)" onerror="window._cdn && _cdn.failed(this, arguments)"></script>
 
 
 			<script type="text/javascript">
@@ -1301,7 +1303,7 @@ if ('rendererEvalAsync' in window) {
 
 <style>.color_9f69e7:not(.nuc) {color:#9F69E7;}.color_4bbe2e:not(.nuc) {color:#4BBE2E;}.color_e7392d:not(.nuc) {color:#E7392D;}.color_3c989f:not(.nuc) {color:#3C989F;}.color_674b1b:not(.nuc) {color:#674B1B;}.color_e96699:not(.nuc) {color:#E96699;}.color_e0a729:not(.nuc) {color:#E0A729;}.color_684b6c:not(.nuc) {color:#684B6C;}.color_5b89d5:not(.nuc) {color:#5B89D5;}.color_2b6836:not(.nuc) {color:#2B6836;}.color_99a949:not(.nuc) {color:#99A949;}.color_df3dc0:not(.nuc) {color:#DF3DC0;}.color_4cc091:not(.nuc) {color:#4CC091;}.color_9b3b45:not(.nuc) {color:#9B3B45;}.color_d58247:not(.nuc) {color:#D58247;}.color_bb86b7:not(.nuc) {color:#BB86B7;}.color_5a4592:not(.nuc) {color:#5A4592;}.color_db3150:not(.nuc) {color:#DB3150;}.color_235e5b:not(.nuc) {color:#235E5B;}.color_9e3997:not(.nuc) {color:#9E3997;}.color_53b759:not(.nuc) {color:#53B759;}.color_c386df:not(.nuc) {color:#C386DF;}.color_385a86:not(.nuc) {color:#385A86;}.color_a63024:not(.nuc) {color:#A63024;}.color_5870dd:not(.nuc) {color:#5870DD;}.color_ea2977:not(.nuc) {color:#EA2977;}.color_50a0cf:not(.nuc) {color:#50A0CF;}.color_d55aef:not(.nuc) {color:#D55AEF;}.color_d1707d:not(.nuc) {color:#D1707D;}.color_43761b:not(.nuc) {color:#43761B;}.color_e06b56:not(.nuc) {color:#E06B56;}.color_8f4a2b:not(.nuc) {color:#8F4A2B;}.color_902d59:not(.nuc) {color:#902D59;}.color_de5f24:not(.nuc) {color:#DE5F24;}.color_a2a5dc:not(.nuc) {color:#A2A5DC;}.color_827327:not(.nuc) {color:#827327;}.color_3c8c69:not(.nuc) {color:#3C8C69;}.color_8d4b84:not(.nuc) {color:#8D4B84;}.color_84b22f:not(.nuc) {color:#84B22F;}.color_4ec0d6:not(.nuc) {color:#4EC0D6;}.color_e23f99:not(.nuc) {color:#E23F99;}.color_e475df:not(.nuc) {color:#E475DF;}.color_619a4f:not(.nuc) {color:#619A4F;}.color_a72f79:not(.nuc) {color:#A72F79;}.color_7d414c:not(.nuc) {color:#7D414C;}.color_aba727:not(.nuc) {color:#ABA727;}.color_965d1b:not(.nuc) {color:#965D1B;}.color_4d5e26:not(.nuc) {color:#4D5E26;}.color_dd8527:not(.nuc) {color:#DD8527;}.color_bd9336:not(.nuc) {color:#BD9336;}.color_e85d72:not(.nuc) {color:#E85D72;}.color_dc7dbb:not(.nuc) {color:#DC7DBB;}.color_bc3663:not(.nuc) {color:#BC3663;}.color_9d8eee:not(.nuc) {color:#9D8EEE;}.color_8469bc:not(.nuc) {color:#8469BC;}.color_73769d:not(.nuc) {color:#73769D;}.color_b14cbc:not(.nuc) {color:#B14CBC;}</style>
 
-<!-- slack-www-hhvm-0fafd9666ffb49434 / 2018-04-10 07:02:20 / v6b959377ea309e2567c89c8bcafb693911e8dc83 / B:H -->
+<!-- slack-www-hhvm-0dc8d017b8c1bac9a / 2018-04-16 06:13:17 / vc441439078b19503b22f9bac74f052089e779ef7 / B:H -->
 
 
 </body>

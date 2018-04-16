@@ -12,3 +12,5 @@ application/.pytest_cache
 .pytest_cache
 htmlcov
 __pycache__
+/slack-bot/downloads/*
+

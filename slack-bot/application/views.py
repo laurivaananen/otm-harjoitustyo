@@ -5,6 +5,7 @@ from application.response_parser import SlashCommandResponse, WebAPIMessage, Att
 import requests
 
 from application.request.request_parser import RequestParser
+from application.response.response_parser import JsonMessage
 
 import json
 import os
@@ -17,38 +18,41 @@ def index():
     request_parser = RequestParser(request)
     request_parser.parse_content()
 
-    if request_parser.find_from_json("type") == "url_verification":
-        return jsonify({"challenge":request_parser.find_from_json("challenge")})
+    print("\n\n\n\n\n\n\n\n\n\n\n")
 
-
-    # print("\n\nPrinting event items\n\n")
-    # for key, value in event.items():
-    #     print("{}: {}".format(key, value))
-
-    # print("\n\nPrinting file items\n\n")
-    # for key, value in event["file"].items():
-    #     print("{}: {}".format(key, value))
-
-    # print("\n\n")
-
-    # request_data = EventRequest(request)
-
-    # request_data.print_request()
-
-    # Verificating slack bot integration
-
-    # if request_data.request["type"] == "url_verification":
-    #     return jsonify({"challenge":request_data.request["challenge"]})
-
-
-    # If the request is a message and not from a bot, send a message
+    print(json.dumps(request_parser.body, indent=4))
 
     print("\n\n\n\n\n\n\n\n\n\n\n")
 
-    print(request_parser.body)
+    
 
-    if request_parser.find_from_json("event"):
-        print("RECIEVED A MESSAGE: {}".format(request_parser.body))
+    if request_parser.find_from_json("type") == "url_verification":
+        return jsonify({"challenge":request_parser.find_from_json("challenge")})
+
+    
+
+
+    message_event = request_parser.find_from_json("event")
+
+    if message_event["subtype"] and message_event["subtype"] == "file_share":
+
+        message_file = message_event["file"]
+        message_file_url = message_file["url_private"]
+        message_file_timestamp = message_file["timestamp"]
+        message_file_filetype = message_file["filetype"]
+
+        authorization_header = {"Authorization": "Bearer {}".format(os.environ["SLACK_OAUTH"])}
+
+        message = JsonMessage(headers=authorization_header)
+        response = message.send_message(url=message_file_url)
+
+        if response:
+            dirpath = os.getcwd()
+
+            with open('{}/downloads/{}'.format(dirpath, "{}.{}".format(message_file_timestamp, message_file_filetype)), 'wb') as f:  
+                f.write(response.content)
+        
+
 
 
 
@@ -134,8 +138,6 @@ def index():
 
 
     # message.send_message()
-
-    print("\nUnknown message type or a message from bot\n")
     return ""
 
 @app.route("/printer", methods=["GET", "POST"])
