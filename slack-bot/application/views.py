@@ -11,7 +11,6 @@ import json
 import os
 
 
-
 @app.route("/", methods=["GET", "POST"])
 def index():
 
@@ -36,11 +35,12 @@ def index():
 
 
         if "subtype" in message_event.keys() and message_event["subtype"] == "file_share":
-            print("\n\nFILE SHARE:\n{}".format(json.dumps(message_event, indent=4)))
+            # print("\n\nFILE SHARE:\n{}".format(json.dumps(message_event, indent=4)))
             bot.download_confirmation(message_event)
 
         if "subtype" not in message_event.keys() and message_event["type"] == "message":
-            print("\n\nMESSAGE EVENT:\n{}".format(json.dumps(message_event, indent=4)))
+            pass
+            # print("\n\nMESSAGE EVENT:\n{}".format(json.dumps(message_event, indent=4)))
 
 
 
@@ -55,7 +55,7 @@ def component():
 
     payload_json = json.loads(request_parser.body["payload"][0])
 
-    print("\n\nCOMPONEN PAYLOAD:\n{}".format(json.dumps(payload_json, indent=4)))
+    # print("\n\nCOMPONEN PAYLOAD:\n{}".format(json.dumps(payload_json, indent=4)))
 
     bot.download_confirmation_update(payload_json)
 
