@@ -12,22 +12,6 @@ Kurssille Ohjelmistotekniikan menetelmät.
 
 [Työaikakirjanpito](/dokumentaatio/tyoaikakirjanpito.md)
 
-# Checkstyle
-
-` (venv) lauri@ubuntu-pc:~/otm-harjoitustyo/slack-bot$ pycodestyle application/ --format='%(path)s %(row)d %(text)s' `
-
-Virheilmoitukset ovat muotoa 
-
-Tiedosto, missä virhe ilmestyi      rivi millä virhe ilmestyi        mikä virhe
-
-# Ohjelman testaus
-
-` (venv) lauri@ubuntu-pc:~/otmt/otm-harjoitustyo/slack-bot$ py.test --cov-report html --cov=application test/ `
-
-Testikattavuusraporttia voi tarkastella avaamalla selaimella  tiedoston htmlcov/index.html
-
-` (venv) lauri@ubuntu-pc:~/otmt/otm-harjoitustyo/slack-bot$ chromium-browser htmlcov/index.html `
-
 # Ohjelman asentaminen ja käyttäminen
 
 Tämä ohjelma on ohjelmoitu Pythonilla versio 3.6.3
@@ -135,3 +119,19 @@ Siirry siihen työympäristöön Slackissa mihin asensit botin. Kun jaat jonkun 
 Jos painat nappia Download niin viesti päivittyy ja tiedosto latautuu kansioon slack-bot/downloads/
 
 ![slack_19](/dokumentaatio/images/slack_19.png)
+
+# Checkstyle
+
+` (venv) lauri@ubuntu-pc:~/otm-harjoitustyo/slack-bot$ pycodestyle application/ --format='%(path)s %(row)d %(text)s' `
+
+Virheilmoitukset ovat muotoa 
+
+Tiedosto, missä virhe ilmestyi      rivi millä virhe ilmestyi        mikä virhe
+
+# Ohjelman testaus
+
+` (venv) lauri@ubuntu-pc:~/otmt/otm-harjoitustyo/slack-bot$ py.test --cov-report html --cov=application test/ `
+
+Testikattavuusraporttia voi tarkastella avaamalla selaimella  tiedoston htmlcov/index.html
+
+` (venv) lauri@ubuntu-pc:~/otmt/otm-harjoitustyo/slack-bot$ chromium-browser htmlcov/index.html `
