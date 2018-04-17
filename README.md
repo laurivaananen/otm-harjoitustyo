@@ -14,7 +14,9 @@ Tämä ohjelma on ohjelmoitu Pythonilla versio 3.6.3
 
 Tarkista oma python versio komennolla `python -V` tai `python3 -V`
 
-Kirjaudu tai tee tunnukset Slackiin https://slack.com/
+Ohjelman käyttämiseen tarvitset tunnukset Slack palveluun ja oman työtilan jonne voit asentaan tämän sovelluksen.
+
+Avaa internet selain ja mene osoitteeseen https://slack.com/ ja paina nappia Create Workspace. Seuraa ohjeita kunnes olet tehnyt tunnkset sekä työtilan.
 
 Lataa ja asenna ngrok ohjelma https://ngrok.com/
 
@@ -22,9 +24,9 @@ Käynnistä ngrok porttiin 3000
 
 `lauri@ubuntu-pc:~$ ./ngrok http 3000`
 
-![ngrok_1](/dokumentaatio/ngrok_1.png)
+![slack_08](/dokumentaatio/images/slack_08.png)
 
-Kopioi annettu https osoite. Tässä esimerkissä https://963dc340.ngrok.io
+Kopioi annettu https osoite..ngrok.io
 
 Kloonaa tämä git repository omalle koneelle. Siirry kansioon slack-bot ja tee uusi virtuaaliympäristö ja aktivoi se.
 
@@ -77,3 +79,20 @@ Kun kirjoitat valitsemaasi työtilan chattiin jotain niin botti vastaa sinulle
 ![slack_6](/dokumentaatio/slack_6.png)
 
 Jos sinulla on hidas nettiyhteys niin botti saattaa vastata useamman kerran
+
+
+
+
+# Ohjelman asentaminen ja käyttäminen
+
+![slack_8](/dokumentaatio/images/slack_8.png)
+
+Ohjelman käyttämiseen tarvitset tunnukset Slack palveluun ja oman työtilan jonne voit asentaan tämän sovelluksen.
+
+Avaa internet selain ja mene osoitteeseen https://slack.com/ ja paina nappia Create Workspace. Seuraa ohjeita kunnes olet tehnyt tunnkset sekä työtilan.
+
+Mene osoitteeseen https://api.slack.com/apps?new_app=1 ja valitse sovelluksellesi haluamasi nimi, ja valitse työtilaksi juuri tekemäsi työtila. Paina Create App.
+
+
+
+
