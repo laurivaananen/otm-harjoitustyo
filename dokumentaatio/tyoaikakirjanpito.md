@@ -7,4 +7,5 @@
 |10.4|6|Toiminnallisuuden lisäämistä  |
 |    |2|Dokumentaatiota   |
 |14.4|6|Testien kirjoittamista  |
-|Yht|24|  |
+|16.4|6|Lisäsin ominaisuuksia  |
+|Yht|30|  |
