@@ -106,7 +106,7 @@ Käynistä ohjelma uudestaan
 
 `(venv) lauri@ubuntu-pc:~/slackbot/otm-harjoitustyo/slack-bot$ python run.py`
 
-Nyt ei pitäisi tulla enää virheviestiä
+Nyt ei pitäisi tulla enää virheviestejä.
 
 ![slack_16](/dokumentaatio/images/slack_16.png)
 
@@ -120,13 +120,11 @@ Jos painat nappia Download niin viesti päivittyy ja tiedosto latautuu kansioon 
 
 ![slack_19](/dokumentaatio/images/slack_19.png)
 
+Liian isojen tiedostojen lataaminen ei välttämättä onnistu. Jos sinun nettiyhteytesi on hidas, botti saattaa vastata useamman kerran.
+
 # Checkstyle
 
 ` (venv) lauri@ubuntu-pc:~/otm-harjoitustyo/slack-bot$ pycodestyle application/ --format='%(path)s %(row)d %(text)s' `
-
-Virheilmoitukset ovat muotoa 
-
-Tiedosto, missä virhe ilmestyi      rivi millä virhe ilmestyi        mikä virhe
 
 # Ohjelman testaus
 
