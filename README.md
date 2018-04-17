@@ -8,6 +8,26 @@ Kurssille Ohjelmistotekniikan menetelmät.
 
 [Testaus](/dokumentaatio/testaus.md)
 
+[Arkkitehtuuri](/dokumentaatio/arkkitehtuuri.md)
+
+[Työaikakirjanpito](/dokumentaatio/tyoaikakirjanpito.md)
+
+# Checkstyle
+
+` (venv) lauri@ubuntu-pc:~/otm-harjoitustyo/slack-bot$ pycodestyle application/ --format='%(path)s %(row)d %(text)s' `
+
+Virheilmoitukset ovat muotoa 
+
+Tiedosto, missä virhe ilmestyi      rivi millä virhe ilmestyi        mikä virhe
+
+# Ohjelman testaus
+
+` (venv) lauri@ubuntu-pc:~/otmt/otm-harjoitustyo/slack-bot$ py.test --cov-report html --cov=application test/ `
+
+Testikattavuusraporttia voi tarkastella avaamalla selaimella  tiedoston htmlcov/index.html
+
+` (venv) lauri@ubuntu-pc:~/otmt/otm-harjoitustyo/slack-bot$ chromium-browser htmlcov/index.html `
+
 # Ohjelman asentaminen ja käyttäminen
 
 Tämä ohjelma on ohjelmoitu Pythonilla versio 3.6.3
@@ -44,7 +64,8 @@ Käynnistä ohjelma
 
 Kun käynnistät ohjelman ensinmäistä kertaa terminaaliin pitäisi tulostua seuraavanlainen viesti:
 
-```(venv) lauri@ubuntu-pc:~/otmt/otm-harjoitustyo/slack-bot$ python run.py
+```
+(venv) lauri@ubuntu-pc:~/otmt/otm-harjoitustyo/slack-bot$ python run.py
 
 
 PLEASE SET BOT_OAUTH ENVIRONMENT VARIABLE CORRECTLY
@@ -63,11 +84,13 @@ Seuraavaksi tehdään uusi Slack App. Mene osoitteeseen https://api.slack.com/ap
 
 ![slack_10](/dokumentaatio/images/slack_10.png)
 
-Siirry valikosta kohtaan Event Subscriptions. Kopioi ngrok ohjelmasta saamasi osoite kohtaan Request URL. Tekstikentän päälle pitäisi ilmestyä teksti Verified. Jos siihen ilmestyi Your URL didn't respond with the value of the challenge parameter. Varmista että ohjelma on käynnissä.
+Paina Create App ja siirry valikosta kohtaan Event Subscriptions. Kopioi ngrok ohjelmasta saamasi osoite kohtaan Request URL. Tekstikentän päälle pitäisi ilmestyä teksti Verified. Jos siihen ilmestyi Your URL didn't respond with the value of the challenge parameter. Varmista että ohjelma on käynnissä.
+
+ HUOM! Ngrok ohjelman antama osoite muuttuu joka kerta kun käynnistät sen uudelleen.
 
 ![slack_9](dokumentaatio/images/slack_9.png)
 
-Alempaa sivu löytyy osio Subscribe to Workspace Events. Paina Add Workspace Event ja valitse messages.channel
+Alempaa sivua löytyy osio Subscribe to Workspace Events. Paina Add Workspace Event ja valitse messages.channel
 
 ![slack_11](dokumentaatio/images/slack_11.png)]
 
@@ -111,4 +134,4 @@ Siirry siihen työympäristöön Slackissa mihin asensit botin. Kun jaat jonkun 
 
 Jos painat nappia Download niin viesti päivittyy ja tiedosto latautuu kansioon slack-bot/downloads/
 
-![slack_18](/dokumentaatio/images/slack_18.png)
+![slack_19](/dokumentaatio/images/slack_19.png)

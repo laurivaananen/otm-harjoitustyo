@@ -12,8 +12,8 @@ def download_image(url):
 
     file_type = url.split(".")[-1]
 
-
-    authorization_header = {"Authorization": "Bearer {}".format(os.environ["SLACK_OAUTH"])}
+    authorization_header = {"Authorization": "Bearer {}"
+                            .format(os.environ["SLACK_OAUTH"])}
 
     message = JsonMessage(headers=authorization_header)
 
@@ -23,8 +23,12 @@ def download_image(url):
     if response:
         dirpath = os.getcwd()
 
-        with open('{}/downloads/{}'.format(dirpath, "{}.{}".format(datetime_now, file_type)), 'wb') as f:  
+        file_path = '{}/downloads/{}'.format(dirpath, "{}.{}".
+                                             format(datetime_now, file_type))
+
+        with open(file_path, 'wb') as f:
             f.write(response.content)
+
 
 def download_confirmation(message_event):
     message_user = message_event["user"]
@@ -38,7 +42,7 @@ def download_confirmation(message_event):
 
     file_name = message_event["file"]["name"]
 
-    body = {"text":text, "channel":message_channel}
+    body = {"text": text, "channel": message_channel}
 
     attachments = [{
                     "text": file_name,
@@ -60,16 +64,20 @@ def download_confirmation(message_event):
     message = JsonMessage(headers=headers, body=body, attachments=attachments)
     response = message.send_message(url=url)
 
+
 def download_confirmation_update(message_payload):
 
-    original_message = message_payload["original_message"]["text"]
-    message_file_url = message_payload["original_message"]["attachments"][0]["actions"][0]["value"]
+    orig_message = message_payload["original_message"]
+    orig_message_text = orig_message["text"]
+    msg_url = orig_message["attachments"][0]["actions"][0]["value"]
     message_channel = message_payload["channel"]["id"]
     message_ts = message_payload["original_message"]["ts"]
 
-    download_image(message_file_url)
+    download_image(msg_url)
 
-    body = {"text":original_message, "channel":message_channel, "ts":message_ts}
+    body = {"text": orig_message_text,
+            "channel": message_channel,
+            "ts": message_ts}
 
     attachments = [{
                     "text": "Thanks for downloading",
@@ -85,4 +93,3 @@ def download_confirmation_update(message_payload):
 
     message = JsonMessage(headers=headers, body=body, attachments=attachments)
     response = message.send_message(url=url)
-

@@ -1,0 +1,1 @@
+![sekvenssikaavio](/dokumentaatio/images/sekvenssikaavio.png)

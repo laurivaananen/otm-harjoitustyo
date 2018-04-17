@@ -1,7 +1,6 @@
 import json
 
 
-
 class JsonParser(object):
 
     def __init__(self, json_obj):
@@ -12,10 +11,11 @@ class JsonParser(object):
 
         try:
             value = self.json_obj[key]
-        except:
+        except KeyError:
             pass
 
         return value
+
 
 class RequestParser(object):
 
@@ -35,16 +35,15 @@ class RequestParser(object):
             else:
                 self.body = None
 
-        except:
-            pass
+        except KeyError:
+            print("Couldn't read request")
 
     def find_from_json(self, key):
         value = None
 
         try:
             value = self.body[key]
-        except:
-            pass
+        except KeyError:
+            print("Couldn't read JSON")
 
         return value
-
