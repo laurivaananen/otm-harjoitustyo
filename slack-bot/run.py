@@ -2,8 +2,9 @@ from application import app
 from PyQt5.QtCore import QThread, QObject
 from PyQt5 import QtCore
 from PyQt5 import QtGui
-from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QVBoxLayout, QPushButton
+from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QVBoxLayout, QPushButton, QLineEdit, QFormLayout, QLabel, QGroupBox
 import sys
+from application import database
 
 class ServerThread(QThread):
 
@@ -26,15 +27,46 @@ class MainGui(QWidget):
         self.initUi()
 
     def initUi(self):
-        button = QPushButton("Hello")
+        self.command_text_edit = QLineEdit()
+        self.response_text_edit = QLineEdit()
+        insert_button = QPushButton("Insert")
+        insert_button.clicked.connect(self.on_click)
+
+        
+
+        form_layout = QFormLayout()
+        form_layout.addRow(QLabel("Regex command"), self.command_text_edit)
+        form_layout.addRow(QLabel("Response"), self.response_text_edit)
+        form_layout.addRow(QLabel("Add to database"), insert_button)
+        form_group_box = QGroupBox("Add a new command")
+        form_group_box.setLayout(form_layout)
+
+        self.info_label = QLabel("")
+
+
         vbox = QVBoxLayout()
-        # vbox.addStretch(1)
-        vbox.addWidget(button)
+        vbox.addStretch(1)
+        vbox.addWidget(QLabel("Haa"))
+        vbox.addWidget(form_group_box)
+        vbox.addWidget(self.info_label)
+
+        
 
         self.setLayout(vbox)
-        self.setGeometry(0, 0, 800, 600)
+        self.setGeometry(0, 0, 300, 200)
         self.setWindowTitle('Slack Bot')    
         self.show()
+
+    @QtCore.pyqtSlot()
+    def on_click(self):
+        command_text = self.command_text_edit.text()
+        response_text = self.response_text_edit.text()
+        print("{} -> {}".format(command_text, response_text))
+        self.info_label.setText("Added command {} to database".format(command_text))
+        database.insert_command(command_text, response_text)
+        self.command_text_edit.clear()
+        self.response_text_edit.clear()
+        print(database.fetch_all_command_pairs())
 
 
 

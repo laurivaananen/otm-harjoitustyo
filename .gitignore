@@ -14,4 +14,4 @@ htmlcov
 __pycache__
 /slack-bot/downloads/*
 !/slack-bot/downloads/empty.txt
-
+slack.db
