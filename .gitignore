@@ -15,3 +15,6 @@ __pycache__
 /slack-bot/downloads/*
 !/slack-bot/downloads/empty.txt
 slack.db
+dist/
+build/
+slack_bot.spec
