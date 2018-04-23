@@ -10,5 +10,7 @@
 |16.4|6|Lisäsin ominaisuuksia  |
 |17.4|7|Dokumentaatiota  |
 |    |1|Checkstyle  |
-|    |1|Testausta
-|Yht|39|  |
+|    |1|Testausta   |
+|22.4|3|Käyttöliitymä   |
+|23.4|3|Käyttöliittymä   |
+|Yht|45|  |

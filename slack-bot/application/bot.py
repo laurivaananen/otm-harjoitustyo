@@ -40,7 +40,10 @@ def send_message(body, channel):
 
     message = JsonMessage(headers=headers, body=body)
     response = message.send_message(url=url)
-    print(response.text)
+    if response.json()["ok"]:
+        print("Message sent")
+    else:
+        print("Error sending message")
 
 
 def download_confirmation(message_event):

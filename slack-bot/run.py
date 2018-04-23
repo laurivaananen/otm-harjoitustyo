@@ -9,6 +9,7 @@ from PyQt5.QtWidgets import (QApplication, QWidget, QMainWindow,
                             QMessageBox)
 import sys
 from application import database
+import os
 
 class ServerThread(QThread):
 
@@ -19,11 +20,11 @@ class ServerThread(QThread):
     def run(self):
         self.app.run(debug=False, port=3000)
 
+
 class MainGui(QWidget):
 
     def __init__(self):
         super().__init__()
-        # QMainWindow.__init__(self)
 
         self.thread = ServerThread(app)
         self.thread.start()
@@ -36,8 +37,6 @@ class MainGui(QWidget):
         insert_button = QPushButton("Insert")
         insert_button.clicked.connect(self.on_click)
 
-        
-
         form_layout = QFormLayout()
         form_layout.addRow(QLabel("Regex trigger"), self.command_text_edit)
         form_layout.addRow(QLabel("Response"), self.response_text_edit)
@@ -45,19 +44,23 @@ class MainGui(QWidget):
         form_group_box = QGroupBox("Add a new bot trigger")
         form_group_box.setLayout(form_layout)
 
-
         self.trigger_table = None
         self.create_table()
 
-        self.delete_table_button = QPushButton("Delete")
+        self.delete_table_button = QPushButton("Delete Row")
         self.delete_table_button.clicked.connect(self.delete_table)
-
 
         self.info_label = QLabel("")
 
         self.tabs = QTabWidget()
 
         self.triggers_layout = QVBoxLayout(self)
+
+        if not os.environ.get("SLACK_OAUTH"):
+            self.triggers_layout.addWidget(QLabel("SLACK_OAUTH not found"))
+        if not os.environ.get("BOT_OAUTH"):
+            self.triggers_layout.addWidget(QLabel("BOT_OAUTH not found"))
+
         self.triggers_layout.addWidget(form_group_box)
         self.triggers_layout.addWidget(self.info_label)
 
@@ -75,15 +78,8 @@ class MainGui(QWidget):
         self.tabs.addTab(self.list_tab, "List bot triggers")
         self.tabs.move(0, 0)
 
-
         vbox = QVBoxLayout()
-        # vbox.addStretch(1)
         vbox.addWidget(self.tabs)
-        # vbox.addWidget(QLabel("Haa"))
-        # vbox.addWidget(form_group_box)
-        # vbox.addWidget(self.info_label)
-
-        
 
         self.setLayout(vbox)
         self.setGeometry(0, 0, 500, 800)
@@ -111,13 +107,10 @@ class MainGui(QWidget):
         database.delete_command(current_item)
         self.update_table()
 
-
     @QtCore.pyqtSlot()
     def update_table(self):
         y_index = self.trigger_table.columnCount()
         x_index = self.trigger_table.rowCount()
-        # self.trigger_table.setColumnCount(0)
-        # self.trigger_table.setRowCount(0)
 
         self.trigger_table.setColumnCount(2)
         self.trigger_table.setRowCount(len(database.fetch_all_command_pairs().items()))
@@ -142,15 +135,7 @@ class MainGui(QWidget):
         self.response_text_edit.clear()
         self.update_table()
 
-
-
 if __name__ == '__main__':
     gui = QApplication(sys.argv)
     w = MainGui()
     sys.exit(gui.exec_())
-
-    
-
-    
-
-    

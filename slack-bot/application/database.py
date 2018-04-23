@@ -33,7 +33,6 @@ def delete_command(command):
 def fetch_all_command_pairs():
     conn = get_database_connection()
     cursor = conn.cursor()
-
     command_pairs = {row[1]: row[2] for row in cursor.execute("SELECT * FROM command")}
     conn.close()
     return command_pairs
