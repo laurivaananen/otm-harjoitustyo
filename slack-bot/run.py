@@ -108,7 +108,6 @@ class MainGui(QWidget):
     def delete_table(self):
         current_row = self.trigger_table.currentRow()
         current_item = self.trigger_table.item(current_row, 0).text()
-        print(current_item)
         database.delete_command(current_item)
         self.update_table()
 
@@ -148,7 +147,6 @@ class MainGui(QWidget):
 if __name__ == '__main__':
     gui = QApplication(sys.argv)
     w = MainGui()
-    # w.show()
     sys.exit(gui.exec_())
 
     

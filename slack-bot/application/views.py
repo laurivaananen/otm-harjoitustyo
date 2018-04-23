@@ -35,7 +35,7 @@ def index():
             print("Received: {}".format(message_event["text"]))
             for command_pair in database.fetch_all_command_pairs().items():
                 if re.match(command_pair[0], message_event["text"]):
-                    print("Sending: {}".format(command_pair[0]))
+                    print("Triggered: {}, Sending: {}".format(command_pair[0], command_pair[1]))
                     bot.send_message(body=command_pair[1], channel=message_event["channel"])
 
     return ""
