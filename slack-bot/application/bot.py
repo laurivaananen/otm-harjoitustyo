@@ -30,6 +30,19 @@ def download_image(url):
             f.write(response.content)
 
 
+def send_message(body, channel):
+    url = "https://slack.com/api/chat.postMessage"
+
+    headers = {"Authorization": "Bearer {}".format(os.environ["BOT_OAUTH"])}
+    headers["Content-Type"] = "application/json; charset=utf-8"
+
+    body={"text": body, "channel":channel}
+
+    message = JsonMessage(headers=headers, body=body)
+    response = message.send_message(url=url)
+    print(response.text)
+
+
 def download_confirmation(message_event):
     message_user = message_event["user"]
     message_channel = message_event["channel"]

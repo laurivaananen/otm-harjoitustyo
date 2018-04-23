@@ -7,8 +7,11 @@ from application import bot
 from application.request.request_parser import RequestParser
 from application.response.response_parser import JsonMessage
 
+from application import database
+
 import json
 import os
+import re
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -29,7 +32,11 @@ def index():
             bot.download_confirmation(message_event)
 
         if "subtype" not in message_event.keys() and message_event["type"] == "message":
-            pass
+            print("Received: {}".format(message_event["text"]))
+            for command_pair in database.fetch_all_command_pairs().items():
+                if re.match(command_pair[0], message_event["text"]):
+                    print("Sending: {}".format(command_pair[0]))
+                    bot.send_message(body=command_pair[1], channel=message_event["channel"])
 
     return ""
 
