@@ -20,4 +20,5 @@ class JsonMessage(object):
             return None
 
     def get_status(self):
-        return "Status code: {}, Status text: {}".format(self.r.status_code, self.r.text)
+        return "Status code: {}, Status text: {}".format(self.r.status_code,
+                                                         self.r.text)

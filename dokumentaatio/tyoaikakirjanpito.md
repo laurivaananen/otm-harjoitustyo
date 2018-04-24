@@ -13,4 +13,5 @@
 |    |1|Testausta   |
 |22.4|3|Käyttöliitymä   |
 |23.4|3|Käyttöliittymä   |
+|23.4|1|Tietokanta   |
 |Yht|45|  |

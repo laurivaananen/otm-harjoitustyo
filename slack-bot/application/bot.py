@@ -36,7 +36,7 @@ def send_message(body, channel):
     headers = {"Authorization": "Bearer {}".format(os.environ["BOT_OAUTH"])}
     headers["Content-Type"] = "application/json; charset=utf-8"
 
-    body={"text": body, "channel":channel}
+    body = {"text": body, "channel": channel}
 
     message = JsonMessage(headers=headers, body=body)
     response = message.send_message(url=url)

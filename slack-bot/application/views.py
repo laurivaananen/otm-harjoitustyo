@@ -28,16 +28,21 @@ def index():
     # Making sure a bot didn't send a message
     if "bot_id" not in message_event.keys() or message_event["bot_id"] is None:
 
-        if "subtype" in message_event.keys() and message_event["subtype"] == "file_share":
+        if ("subtype" in message_event.keys() and
+                message_event["subtype"] == "file_share"):
+
             bot.download_confirmation(message_event)
 
-        if "subtype" not in message_event.keys() and message_event["type"] == "message":
+        if ("subtype" not in message_event.keys()
+                and message_event["type"] == "message"):
+
             print("Received: {}".format(message_event["text"]))
             for command_pair in database.fetch_all_command_pairs().items():
                 if re.match(command_pair[0], message_event["text"]):
                     print("Triggered: {}".format(command_pair[0]))
                     print("Sending: {}".format(command_pair[1]))
-                    bot.send_message(body=command_pair[1], channel=message_event["channel"])
+                    bot.send_message(body=command_pair[1],
+                                     channel=message_event["channel"])
 
     return ""
 

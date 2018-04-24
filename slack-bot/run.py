@@ -57,9 +57,11 @@ class MainGui(QWidget):
         self.triggers_layout = QVBoxLayout(self)
 
         if not os.environ.get("SLACK_OAUTH"):
-            self.triggers_layout.addWidget(QLabel("SLACK_OAUTH not found"))
+            slack_oauth_info = QLabel("SLACK_OAUTH not found")
+            self.triggers_layout.addWidget(slack_oauth_info)
         if not os.environ.get("BOT_OAUTH"):
-            self.triggers_layout.addWidget(QLabel("BOT_OAUTH not found"))
+            bot_oauth_info = QLabel("BOT_OAUTH not found")
+            self.triggers_layout.addWidget(bot_oauth_info)
 
         self.triggers_layout.addWidget(form_group_box)
         self.triggers_layout.addWidget(self.info_label)
