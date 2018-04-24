@@ -14,4 +14,5 @@
 |22.4|3|Käyttöliitymä   |
 |23.4|3|Käyttöliittymä   |
 |23.4|1|Tietokanta   |
-|Yht|45|  |
+|24.4|2|Dokumentaatiota    |
+|Yht|48|  |
