@@ -23,7 +23,6 @@ def download_image(url):
     if response:
         dirpath = os.getcwd()
 
-
         file_path = '{}/downloads/{}'.format(dirpath, "{}.{}".
                                              format(datetime_now, file_type))
 

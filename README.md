@@ -2,6 +2,8 @@
 
 Kurssille Ohjelmistotekniikan menetelmät.
 
+Ohjelma helpottaa Slack palvelussa jaettujen tiedostojen lataamista omalle koneelle, sekä tarjoaa ominaisuuden omien komentojen tekemisen botille johon botti vastaa haluamallasi tavalla.
+
 # Dokumentaatio 
 
 [Vaatimusmäärittely](/dokumentaatio/vaatimusmaarittely.md)
@@ -11,6 +13,12 @@ Kurssille Ohjelmistotekniikan menetelmät.
 [Arkkitehtuuri](/dokumentaatio/arkkitehtuuri.md)
 
 [Työaikakirjanpito](/dokumentaatio/tyoaikakirjanpito.md)
+
+[Checkstyle, testaus ja suoritettavan tiedoston generointi](#checkstyle)
+
+# Releaset
+
+[Viikko 5](https://github.com/laurivaananen/otm-harjoitustyo/releases/tag/viikko5)
 
 # Ohjelman asentaminen ja käyttäminen
 
@@ -128,15 +136,21 @@ Set bot triggers osiossa voit valita eri regular expression triggereitä botille
 
 ![gui_0](/dokumentaatio/images/gui_0.png)
 
+![extra_0](/dokumentaatio/images/extra_0.png)
+
 List bot triggers osiossa on listaus kaikista triggereistä mitä olet tallentanut tietokantaan. Jos valitset niistä jonkun ja painat Delete Row se poistetaan tietokannasta.
 
 ![gui_1](/dokumentaatio/images/gui_1.png)
 
 # Checkstyle
 
+Suorita Checkstyle. Virheilmoitukset tulostuvat terminaaliin.
+
 ` (venv) lauri@ubuntu-pc:~/otm-harjoitustyo/slack-bot$ pycodestyle application/ --format='%(path)s %(row)d %(text)s' `
 
 # Ohjelman testaus
+
+Testikattavuusraportin generointi
 
 ` (venv) lauri@ubuntu-pc:~/otmt/otm-harjoitustyo/slack-bot$ py.test --cov-report html --cov=application test/ `
 
