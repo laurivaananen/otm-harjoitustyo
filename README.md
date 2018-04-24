@@ -122,6 +122,16 @@ Jos painat nappia Download niin viesti päivittyy ja tiedosto latautuu kansioon 
 
 Liian isojen tiedostojen lataaminen ei välttämättä onnistu. Jos sinun nettiyhteytesi on hidas, botti saattaa vastata useamman kerran.
 
+### Ohjelman graafisen käyttöliittymän käyttäminen
+
+Set bot triggers osiossa voit valita eri regular expression triggereitä botille ja sen vastauksia. Jos käyttäjän lähettämä viesti slackissa vastaa jotain triggeriä niin botti vastaa Response viestillä. Seuraavassa tapauksessa jos käyttäjä kirjoittaa `Hello` tai `hello` niin botti vastaa `World`.
+
+![gui_0](/dokumentaatio/images/gui_0.png)
+
+List bot triggers osiossa on listaus kaikista triggereistä mitä olet tallentanut tietokantaan. Jos valitset niistä jonkun ja painat Delete Row se poistetaan tietokannasta.
+
+![gui_1](/dokumentaatio/images/gui_1.png)
+
 # Checkstyle
 
 ` (venv) lauri@ubuntu-pc:~/otm-harjoitustyo/slack-bot$ pycodestyle application/ --format='%(path)s %(row)d %(text)s' `
@@ -133,3 +143,18 @@ Liian isojen tiedostojen lataaminen ei välttämättä onnistu. Jos sinun nettiy
 Testikattavuusraporttia voi tarkastella avaamalla selaimella  tiedoston htmlcov/index.html
 
 ` (venv) lauri@ubuntu-pc:~/otmt/otm-harjoitustyo/slack-bot$ chromium-browser htmlcov/index.html `
+
+# Suorituskelpoisen tiedoston tekeminen
+
+` (venv) lauri@ubuntu-pc:~/otmt/otm-harjoitustyo/slack-bot$ pyinstaller run.py -n slack_bot --onefile --windowed `
+
+Jos sinulla tulee virhe tiedostoa tehdessä lataa ensiki oman python versiosi dev versio.
+Esimerkiksi jos python versiosi on 3.6.3
+
+`sudo apt install python3.6-dev`
+
+Tiedosto rakentuun kansion dist sisälle.
+
+Ohjelman suorittaminen:
+
+` (venv) lauri@ubuntu-pc:~/otmt/otm-harjoitustyo/slack-bot/dist$ ./slack_bot `

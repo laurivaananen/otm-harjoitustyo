@@ -23,8 +23,12 @@ def download_image(url):
     if response:
         dirpath = os.getcwd()
 
+
         file_path = '{}/downloads/{}'.format(dirpath, "{}.{}".
                                              format(datetime_now, file_type))
+
+        if not os.path.exists('{}/downloads/'.format(dirpath)):
+            os.makedirs('{}/downloads/'.format(dirpath))
 
         with open(file_path, 'wb') as f:
             f.write(response.content)
