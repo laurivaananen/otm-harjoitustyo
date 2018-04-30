@@ -15,4 +15,5 @@
 |23.4|3|Käyttöliittymä   |
 |23.4|1|Tietokanta   |
 |24.4|2|Dokumentaatiota    |
-|Yht|48|  |
+|30.4|1|Dokumentaatiota   |
+|Yht|49|  |
