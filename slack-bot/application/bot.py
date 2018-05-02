@@ -63,7 +63,9 @@ def send_message(body, channel):
     """
     url = "https://slack.com/api/chat.postMessage"
 
-    headers = {"Authorization": "Bearer {}".format(os.environ["BOT_OAUTH"])}
+    bot_token = database.fetch_token("bot")
+
+    headers = {"Authorization": "Bearer {}".format(bot_token)}
     headers["Content-Type"] = "application/json; charset=utf-8"
 
     body = {"text": body, "channel": channel}

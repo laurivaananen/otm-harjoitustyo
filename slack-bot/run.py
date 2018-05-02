@@ -13,7 +13,9 @@ import os
 
 class ServerThread(QThread):
     """
-    Create a new thread to run the application
+    A thread in which the application runs
+
+    :param Flask app: Flask application
     """
 
     def __init__(self, app):
@@ -41,7 +43,7 @@ class MainGui(QWidget):
         self.initUi()
 
     def initUi(self):
-        """Initialize the ui"""
+        """Initializes the ui"""
         self.command_text_edit = QLineEdit()
         self.response_text_edit = QLineEdit()
         insert_button = QPushButton("Insert")
@@ -62,9 +64,30 @@ class MainGui(QWidget):
 
         self.info_label = QLabel("")
 
+
+        self.token_info = QLabel("")
+        self.slack_token = QLineEdit()
+        self.bot_token = QLineEdit()
+        self.token_insert = QPushButton("Insert")
+        self.token_insert.clicked.connect(self.insert_tokens)
+
+        self.token_items_layout = QFormLayout()
+        self.token_items_layout.addRow(QLabel("OAuth access token"), self.slack_token)
+        self.token_items_layout.addRow(QLabel("Bot user OAuth access token"), self.bot_token)
+        self.token_items_layout.addRow(QLabel("Add to database"), self.token_insert)
+        self.token_group = QGroupBox("Add OAuth tokens")
+        self.token_group.setLayout(self.token_items_layout)
+
+        self.token_layout = QVBoxLayout()
+        self.token_layout.addWidget(self.token_group)
+        self.token_layout.addWidget(self.token_info)
+        
+        self.token_tab = QWidget()
+        self.token_tab.setLayout(self.token_layout)
+
         self.tabs = QTabWidget()
 
-        self.triggers_layout = QVBoxLayout(self)
+        self.triggers_layout = QVBoxLayout()
 
         if not os.environ.get("SLACK_OAUTH"):
             slack_oauth_info = QLabel("SLACK_OAUTH not found")
@@ -79,6 +102,8 @@ class MainGui(QWidget):
         self.triggers_tab = QWidget()
         self.triggers_tab.setLayout(self.triggers_layout)
 
+        
+
         self.list_layout = QVBoxLayout(self)
         self.list_layout.addWidget(self.trigger_table)
         self.list_layout.addWidget(self.delete_table_button)
@@ -86,6 +111,7 @@ class MainGui(QWidget):
         self.list_tab = QWidget()
         self.list_tab.setLayout(self.list_layout)
 
+        self.tabs.addTab(self.token_tab, "Set OAuth tokens")
         self.tabs.addTab(self.triggers_tab, "Set bot triggers")
         self.tabs.addTab(self.list_tab, "List bot triggers")
         self.tabs.move(0, 0)
@@ -100,6 +126,9 @@ class MainGui(QWidget):
 
     @QtCore.pyqtSlot()
     def create_table(self):
+        """
+        Creates a table and fetches all rows from the database
+        """
         trigger_table = QTableWidget()
         trigger_table.setColumnCount(2)
         trigger_table.setRowCount(len(database.fetch_all_command_pairs().items()))
@@ -114,6 +143,7 @@ class MainGui(QWidget):
 
     @QtCore.pyqtSlot()
     def delete_table(self):
+        """Deletes a currently selected row from the database"""
         current_row = self.trigger_table.currentRow()
         current_item = self.trigger_table.item(current_row, 0).text()
         database.delete_command(current_item)
@@ -121,6 +151,7 @@ class MainGui(QWidget):
 
     @QtCore.pyqtSlot()
     def update_table(self):
+        """Updates all the items in the table"""
         y_index = self.trigger_table.columnCount()
         x_index = self.trigger_table.rowCount()
 
@@ -136,6 +167,7 @@ class MainGui(QWidget):
 
     @QtCore.pyqtSlot()
     def on_click(self):
+        """Adds command and response to the database"""
         command_text = self.command_text_edit.text()
         response_text = self.response_text_edit.text()
         print("{} -> {}".format(command_text, response_text))
@@ -146,6 +178,19 @@ class MainGui(QWidget):
         self.command_text_edit.clear()
         self.response_text_edit.clear()
         self.update_table()
+
+    @QtCore.pyqtSlot()
+    def insert_tokens(self):
+        """Adds tokens to the database"""
+        slack_token = self.slack_token.text()
+        bot_token = self.bot_token.text()
+        print("{}\n{}".format(slack_token, bot_token))
+        database.insert_token(slack_token, bot_token)
+
+        self.slack_token.clear()
+        self.bot_token.clear()
+        self.token_info.clear()
+        self.token_info.setText("Added token to the database")
 
 if __name__ == '__main__':
     gui = QApplication(sys.argv)

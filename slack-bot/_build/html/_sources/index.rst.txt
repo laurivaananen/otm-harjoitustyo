@@ -10,13 +10,22 @@ Welcome to slack_bot_doc's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+.. automodule:: application.views
+    :members:
+
 .. automodule:: run
     :members:
 
 .. automodule:: application.bot
     :members:
 
-.. autoclass:: application.request.request_parser.RequestParser
+.. automodule:: application.request.request_parser
+    :members:
+
+.. automodule:: application.response.response_parser
+    :members:
+
+.. automodule:: application.database
     :members:
 
 Indices and tables

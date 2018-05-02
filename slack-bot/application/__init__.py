@@ -3,11 +3,11 @@ import os
 from application import database
 from sqlite3 import OperationalError
 
-if "BOT_OAUTH" not in os.environ.keys():
-    print("\n\nPLEASE SET BOT_OAUTH ENVIRONMENT VARIABLE CORRECTLY\n\n")
+# if "BOT_OAUTH" not in os.environ.keys():
+#     print("\n\nPLEASE SET BOT_OAUTH ENVIRONMENT VARIABLE CORRECTLY\n\n")
 
-if "SLACK_OAUTH" not in os.environ.keys():
-    print("\n\nPLEASE SET SLACK_OAUTH ENVIRONMENT VARIABLE CORRECTLY\n\n")
+# if "SLACK_OAUTH" not in os.environ.keys():
+#     print("\n\nPLEASE SET SLACK_OAUTH ENVIRONMENT VARIABLE CORRECTLY\n\n")
 
 app = Flask(__name__)
 
@@ -18,3 +18,7 @@ try:
 except OperationalError:
     pass
 
+try:
+    database.create_tokens_table()
+except OperationalError:
+    pass

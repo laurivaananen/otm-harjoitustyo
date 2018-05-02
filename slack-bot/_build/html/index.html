@@ -33,14 +33,56 @@
 <h1>Welcome to slack_bot_doc’s documentation!<a class="headerlink" href="#welcome-to-slack-bot-doc-s-documentation" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
+<span class="target" id="module-application.views"></span><dl class="function">
+<dt id="application.views.component">
+<code class="descclassname">application.views.</code><code class="descname">component</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.views.component" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps the route for component actions coming from Slack</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="application.views.index_page">
+<code class="descclassname">application.views.</code><code class="descname">index_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.views.index_page" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps the route for messages coming from Slack</p>
+</dd></dl>
+
 <span class="target" id="module-run"></span><dl class="class">
 <dt id="run.MainGui">
 <em class="property">class </em><code class="descclassname">run.</code><code class="descname">MainGui</code><a class="headerlink" href="#run.MainGui" title="Permalink to this definition">¶</a></dt>
 <dd><p>The gui</p>
 <dl class="method">
+<dt id="run.MainGui.create_table">
+<code class="descname">create_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#run.MainGui.create_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a table and fetches all rows from the database</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="run.MainGui.delete_table">
+<code class="descname">delete_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#run.MainGui.delete_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a currently selected row from the database</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="run.MainGui.initUi">
 <code class="descname">initUi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#run.MainGui.initUi" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize the ui</p>
+<dd><p>Initializes the ui</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="run.MainGui.insert_tokens">
+<code class="descname">insert_tokens</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#run.MainGui.insert_tokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds tokens to the database</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="run.MainGui.on_click">
+<code class="descname">on_click</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#run.MainGui.on_click" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds command and response to the database</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="run.MainGui.update_table">
+<code class="descname">update_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#run.MainGui.update_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates all the items in the table</p>
 </dd></dl>
 
 </dd></dl>
@@ -48,7 +90,15 @@
 <dl class="class">
 <dt id="run.ServerThread">
 <em class="property">class </em><code class="descclassname">run.</code><code class="descname">ServerThread</code><span class="sig-paren">(</span><em>app</em><span class="sig-paren">)</span><a class="headerlink" href="#run.ServerThread" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new thread to run the application</p>
+<dd><p>A thread in which the application runs</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>app</strong> (<em>Flask</em>) – Flask application</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="run.ServerThread.run">
 <code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#run.ServerThread.run" title="Permalink to this definition">¶</a></dt>
@@ -135,10 +185,213 @@
 </table>
 </dd></dl>
 
-<dl class="class">
+<span class="target" id="module-application.request.request_parser"></span><dl class="class">
 <dt id="application.request.request_parser.RequestParser">
 <em class="property">class </em><code class="descclassname">application.request.request_parser.</code><code class="descname">RequestParser</code><span class="sig-paren">(</span><em>request_obj</em><span class="sig-paren">)</span><a class="headerlink" href="#application.request.request_parser.RequestParser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Requesting</p>
+<dd><p>Represents a message from Slack</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>request_obj</strong> (<em>json</em>) – Message from Slack</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="application.request.request_parser.RequestParser.find_from_json">
+<code class="descname">find_from_json</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#application.request.request_parser.RequestParser.find_from_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to find the value by given key</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) – The key to search by</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The value fo the key</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">obj</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.request.request_parser.RequestParser.parse_content">
+<code class="descname">parse_content</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.request.request_parser.RequestParser.parse_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to parse the contents</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-application.response.response_parser"></span><dl class="class">
+<dt id="application.response.response_parser.JsonMessage">
+<em class="property">class </em><code class="descclassname">application.response.response_parser.</code><code class="descname">JsonMessage</code><span class="sig-paren">(</span><em>headers={}</em>, <em>body={}</em>, <em>attachments=None</em><span class="sig-paren">)</span><a class="headerlink" href="#application.response.response_parser.JsonMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>A message that can be sent to Slack</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>headers</strong> (<em>dict</em>) – Headers of the http request</li>
+<li><strong>body</strong> (<em>dict</em>) – The data of the https request</li>
+<li><strong>attachments</strong> (<em>list</em>) – Attachments of the body</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="application.response.response_parser.JsonMessage.get_status">
+<code class="descname">get_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.response.response_parser.JsonMessage.get_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a nicely formatted status text</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Status code</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.response.response_parser.JsonMessage.send_message">
+<code class="descname">send_message</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#application.response.response_parser.JsonMessage.send_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends this message to a given url</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>url</strong> (<em>str</em>) – The url to send this message</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Status code of the http request</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-application.database"></span><dl class="function">
+<dt id="application.database.create_command_table">
+<code class="descclassname">application.database.</code><code class="descname">create_command_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.database.create_command_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a database table for regular expression triggers</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="application.database.create_tokens_table">
+<code class="descclassname">application.database.</code><code class="descname">create_tokens_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.database.create_tokens_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a database for tokens</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="application.database.delete_command">
+<code class="descclassname">application.database.</code><code class="descname">delete_command</code><span class="sig-paren">(</span><em>command</em><span class="sig-paren">)</span><a class="headerlink" href="#application.database.delete_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a command from the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>command</strong> (<em>str</em>) – Deletes this row from the database</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="application.database.fetch_all_command_pairs">
+<code class="descclassname">application.database.</code><code class="descname">fetch_all_command_pairs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.database.fetch_all_command_pairs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches all rows from database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">All trigger, response pairs from database</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="application.database.fetch_token">
+<code class="descclassname">application.database.</code><code class="descname">fetch_token</code><span class="sig-paren">(</span><em>token</em><span class="sig-paren">)</span><a class="headerlink" href="#application.database.fetch_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches token from the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>token</strong> (<em>str</em>) – The type of token to return</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">OAuth token</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="application.database.get_database_connection">
+<code class="descclassname">application.database.</code><code class="descname">get_database_connection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#application.database.get_database_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a database connection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Database connection</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Connection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="application.database.insert_command">
+<code class="descclassname">application.database.</code><code class="descname">insert_command</code><span class="sig-paren">(</span><em>command</em>, <em>response</em><span class="sig-paren">)</span><a class="headerlink" href="#application.database.insert_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts a command, response pair into a database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>command</strong> (<em>str</em>) – Regular expression  to match a message received from Slack</li>
+<li><strong>response</strong> (<em>str</em>) – Bot responds with this message</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">If it was possible to insert into the database</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="application.database.insert_token">
+<code class="descclassname">application.database.</code><code class="descname">insert_token</code><span class="sig-paren">(</span><em>oauth_token</em>, <em>bot_token</em><span class="sig-paren">)</span><a class="headerlink" href="#application.database.insert_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts oauth tokens in to the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>oauth_token</strong> (<em>str</em>) – OAuth access token</li>
+<li><strong>bot_token</strong> (<em>str</em>) – Bot user OAuth access token</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>

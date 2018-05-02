@@ -15,6 +15,9 @@ import re
 
 @app.route("/", methods=["GET", "POST"])
 def index_page():
+    """
+    Maps the route for messages coming from Slack
+    """
 
     request_parser = RequestParser(request)
     request_parser.parse_content()
@@ -44,6 +47,9 @@ app.view_functions['indexx'] = index_page
 # If a user clicks on a button, this gets triggered
 @app.route("/component", methods=["GET", "POST"])
 def component():
+    """
+    Maps the route for component actions coming from Slack
+    """
 
     request_parser = RequestParser(request)
     request_parser.parse_content()

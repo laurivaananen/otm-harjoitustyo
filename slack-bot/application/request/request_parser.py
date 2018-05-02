@@ -19,7 +19,9 @@ class JsonParser(object):
 
 class RequestParser(object):
     """
-    Requesting
+    Represents a message from Slack
+
+    :param json request_obj: Message from Slack
     """
 
     def __init__(self, request_obj):
@@ -28,6 +30,9 @@ class RequestParser(object):
         self.body = None
 
     def parse_content(self):
+        """
+        Tries to parse the contents
+        """
         try:
             if self.headers["Content-Type"] == "application/json":
                 self.body = self.request_obj.get_json()
@@ -42,6 +47,13 @@ class RequestParser(object):
             print("Couldn't read request")
 
     def find_from_json(self, key):
+        """
+        Tries to find the value by given key
+
+        :param str key: The key to search by
+        :return: The value fo the key
+        :rtype: obj
+        """
         value = None
 
         try:
