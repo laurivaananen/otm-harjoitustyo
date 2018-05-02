@@ -16,11 +16,15 @@ Ohjelma helpottaa Slack palvelussa jaettujen tiedostojen lataamista omalle konee
 
 [Työaikakirjanpito](/dokumentaatio/tyoaikakirjanpito.md)
 
+[Ohjelman asentaminen gitistä](/dokumentaatio/asentaminen.md)
+
 # Releaset
 
 [Viikko 5](https://github.com/laurivaananen/otm-harjoitustyo/releases/tag/viikko5)
 
 # Komentorivitoiminnot
+
+Asenna ohjelma ensiksi -> [Ohjelman asentaminen gitistä](/dokumentaatio/asentaminen.md)
 
 ## Checkstyle
 

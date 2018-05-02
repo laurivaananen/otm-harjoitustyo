@@ -39,6 +39,7 @@ def download_image(url):
         with open(file_path, 'wb') as f:
             f.write(response.content)
 
+
 def match_trigger(text, channel):
     """
     If matches regular expression trigger, will respond with a message
@@ -52,7 +53,7 @@ def match_trigger(text, channel):
             print("Triggered: {}".format(command_pair[0]))
             print("Sending: {}".format(command_pair[1]))
             send_message(body=command_pair[1],
-                            channel=channel)
+                         channel=channel)
 
 
 def send_message(body, channel):

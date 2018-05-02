@@ -4,7 +4,7 @@ Lataa tiedosto [slack_bot](https://github.com/laurivaananen/otm-harjoitustyo/rel
 
 Käynnistä ohjelma 
 
-`(venv) lauri@ubuntu-pc:~$ ./slack_bot`
+`lauri@ubuntu-pc:~$ ./slack_bot`
 
 Lataa ja asenna ngrok ohjelma https://ngrok.com/
 
@@ -26,11 +26,11 @@ Paina Create App ja siirry valikosta kohtaan Event Subscriptions. Kopioi ngrok o
 
 HUOM! Ngrok ohjelman antama osoite muuttuu joka kerta kun käynnistät sen uudelleen.
 
-![slack_9](dokumentaatio/images/slack_9.png)
+![slack_9](/dokumentaatio/images/slack_9.png)
 
 Alempaa sivua löytyy osio Subscribe to Workspace Events. Paina Add Workspace Event ja valitse messages.channel
 
-![slack_11](dokumentaatio/images/slack_11.png)]
+![slack_11](/dokumentaatio/images/slack_11.png)
 
 Paina save changes ja siirry valikosta kohtaan Bot Users. Paina Add a Bot User. Valitse botille nimi ja paina Add Bot User.
 

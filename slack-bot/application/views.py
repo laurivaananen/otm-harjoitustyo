@@ -13,6 +13,7 @@ import json
 import os
 import re
 
+
 @app.route("/", methods=["GET", "POST"])
 def index_page():
     """
@@ -23,7 +24,8 @@ def index_page():
     request_parser.parse_content()
 
     if request_parser.find_from_json("type") == "url_verification":
-        return jsonify({"challenge": request_parser.find_from_json("challenge")})
+        return jsonify({"challenge":
+                        request_parser.find_from_json("challenge")})
 
     message_event = request_parser.find_from_json("event")
 
@@ -42,7 +44,6 @@ def index_page():
 
     return ""
 
-app.view_functions['indexx'] = index_page
 
 # If a user clicks on a button, this gets triggered
 @app.route("/component", methods=["GET", "POST"])

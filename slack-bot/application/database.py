@@ -22,6 +22,7 @@ def create_command_table():
     conn.commit()
     conn.close()
 
+
 def create_tokens_table():
     """
     Creates a database for tokens
@@ -33,10 +34,11 @@ def create_tokens_table():
     conn.commit()
     conn.close()
 
+
 def insert_token(oauth_token, bot_token):
     """
     Inserts oauth tokens in to the database
-    
+
     :param str oauth_token: OAuth access token
     :param str bot_token: Bot user OAuth access token
     """
@@ -100,6 +102,7 @@ def fetch_all_command_pairs():
                      in cursor.execute("SELECT * FROM command")}
     conn.close()
     return command_pairs
+
 
 def fetch_token(token):
     """
