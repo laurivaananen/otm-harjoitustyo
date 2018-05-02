@@ -22,6 +22,8 @@ Ohjelma helpottaa Slack palvelussa jaettujen tiedostojen lataamista omalle konee
 
 [Viikko 5](https://github.com/laurivaananen/otm-harjoitustyo/releases/tag/viikko5)
 
+[Viikko 6](https://github.com/laurivaananen/otm-harjoitustyo/releases/tag/viikko6)
+
 # Komentorivitoiminnot
 
 Asenna ohjelma ensiksi -> [Ohjelman asentaminen gitistä](/dokumentaatio/asentaminen.md)
@@ -54,7 +56,7 @@ Dokumentaation generoiminen
 
 ## Suorituskelpoisen tiedoston tekeminen
 
-` (venv) lauri@ubuntu-pc:~/otm-harjoitustyo/slack-bot$ pyinstaller run.py -n slack_bot --onefile --windowed `
+` (venv) lauri@ubuntu-pc:~/otm-harjoitustyo/slack-bot$ pyinstaller run.py -n slack_bot --onefile --windowed`
 
 Jos sinulla tulee virhe tiedostoa tehdessä lataa ensiki oman python versiosi dev versio.
 Esimerkiksi jos python versiosi on 3.6.3

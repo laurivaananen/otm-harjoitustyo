@@ -16,4 +16,6 @@
 |23.4|1|Tietokanta   |
 |24.4|2|Dokumentaatiota    |
 |30.4|1|Dokumentaatiota   |
-|Yht|49|  |
+|2.5|2|Automaattinen dokumentaatio   |
+|2.5|2|Toiminnalisuuden lisääminen   |
+|Yht|53|  |
