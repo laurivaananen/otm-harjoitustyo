@@ -13,9 +13,8 @@ import json
 import os
 import re
 
-
 @app.route("/", methods=["GET", "POST"])
-def index():
+def index_page():
 
     request_parser = RequestParser(request)
     request_parser.parse_content()
@@ -36,16 +35,11 @@ def index():
         if ("subtype" not in message_event.keys()
                 and message_event["type"] == "message"):
 
-            print("Received: {}".format(message_event["text"]))
-            for command_pair in database.fetch_all_command_pairs().items():
-                if re.match(command_pair[0], message_event["text"]):
-                    print("Triggered: {}".format(command_pair[0]))
-                    print("Sending: {}".format(command_pair[1]))
-                    bot.send_message(body=command_pair[1],
-                                     channel=message_event["channel"])
+            bot.match_trigger(message_event["text"], message_event["channel"])
 
     return ""
 
+app.view_functions['indexx'] = index_page
 
 # If a user clicks on a button, this gets triggered
 @app.route("/component", methods=["GET", "POST"])

@@ -17,3 +17,4 @@ try:
     database.create_command_table()
 except OperationalError:
     pass
+

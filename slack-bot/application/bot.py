@@ -4,9 +4,16 @@ import json
 import os
 import requests
 from datetime import datetime
+from application import database
+import re
 
 
 def download_image(url):
+    """
+    Downloads an image and saves it
+
+    :param str url: url to the image
+    """
 
     datetime_now = datetime.now().strftime("%Y%m%d-%H%M%S")
 
@@ -32,8 +39,28 @@ def download_image(url):
         with open(file_path, 'wb') as f:
             f.write(response.content)
 
+def match_trigger(text, channel):
+    """
+    If matches regular expression trigger, will respond with a message
+
+    :param str text: The message to match against
+    :param str channel: The channel to send the message
+    """
+    print("Received: {}".format(text))
+    for command_pair in database.fetch_all_command_pairs().items():
+        if re.match(command_pair[0], text):
+            print("Triggered: {}".format(command_pair[0]))
+            print("Sending: {}".format(command_pair[1]))
+            send_message(body=command_pair[1],
+                            channel=channel)
+
 
 def send_message(body, channel):
+    """Sends a message
+
+    :param str body: The message to be sent
+    :param str channel: The channel to send the message
+    """
     url = "https://slack.com/api/chat.postMessage"
 
     headers = {"Authorization": "Bearer {}".format(os.environ["BOT_OAUTH"])}
@@ -50,6 +77,11 @@ def send_message(body, channel):
 
 
 def download_confirmation(message_event):
+    """
+    Sends a download confirmation message
+
+    :param json message_event: Message event got from slack
+    """
     message_user = message_event["user"]
     message_channel = message_event["channel"]
     message_file_url = message_event["file"]["url_private"]
@@ -85,6 +117,11 @@ def download_confirmation(message_event):
 
 
 def download_confirmation_update(message_payload):
+    """
+    Updates download confirmation message
+
+    :param json message_payload: Message payload got from Slack
+    """
 
     orig_message = message_payload["original_message"]
     orig_message_text = orig_message["text"]

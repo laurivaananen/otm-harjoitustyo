@@ -18,6 +18,9 @@ class JsonParser(object):
 
 
 class RequestParser(object):
+    """
+    Requesting
+    """
 
     def __init__(self, request_obj):
         self.request_obj = request_obj

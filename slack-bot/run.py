@@ -1,6 +1,6 @@
+from PyQt5 import QtCore
 from application import app
 from PyQt5.QtCore import QThread, QObject
-from PyQt5 import QtCore
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import (QApplication, QWidget, QMainWindow,
                             QVBoxLayout, QPushButton, QLineEdit, QFormLayout, QLabel,
@@ -12,16 +12,25 @@ from application import database
 import os
 
 class ServerThread(QThread):
+    """
+    Create a new thread to run the application
+    """
 
     def __init__(self, app):
         QThread.__init__(self)
         self.app = app
 
     def run(self):
+        """
+        Run the application
+        """
         self.app.run(debug=False, port=3000)
 
 
 class MainGui(QWidget):
+    """
+    The gui
+    """
 
     def __init__(self):
         super().__init__()
@@ -32,6 +41,7 @@ class MainGui(QWidget):
         self.initUi()
 
     def initUi(self):
+        """Initialize the ui"""
         self.command_text_edit = QLineEdit()
         self.response_text_edit = QLineEdit()
         insert_button = QPushButton("Insert")
