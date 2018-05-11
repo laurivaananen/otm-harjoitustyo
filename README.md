@@ -24,6 +24,8 @@ Ohjelma helpottaa Slack palvelussa jaettujen tiedostojen lataamista omalle konee
 
 [Viikko 6](https://github.com/laurivaananen/otm-harjoitustyo/releases/tag/viikko6)
 
+[Viikko 7](https://github.com/laurivaananen/otm-harjoitustyo/releases/tag/viikko7)
+
 # Komentorivitoiminnot
 
 Asenna ohjelma ensiksi -> [Ohjelman asentaminen gitistä](/dokumentaatio/asentaminen.md)
