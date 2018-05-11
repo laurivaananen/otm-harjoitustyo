@@ -18,4 +18,5 @@
 |30.4|1|Dokumentaatiota   |
 |2.5|2|Automaattinen dokumentaatio   |
 |2.5|2|Toiminnalisuuden lisääminen   |
-|Yht|53|  |
+|11.5|2|Toiminnalisuuden lisääminen  |
+|Yht|55|  |

@@ -19,8 +19,10 @@ def download_image(url):
 
     file_type = url.split(".")[-1]
 
+    slack_token = database.fetch_token("slack")
+
     authorization_header = {"Authorization": "Bearer {}"
-                            .format(os.environ["SLACK_OAUTH"])}
+                            .format(slack_token)}
 
     message = JsonMessage(headers=authorization_header)
 
@@ -89,7 +91,9 @@ def download_confirmation(message_event):
     message_channel = message_event["channel"]
     message_file_url = message_event["file"]["url_private"]
 
-    headers = {"Authorization": "Bearer {}".format(os.environ["BOT_OAUTH"])}
+    bot_token = database.fetch_token("bot")
+
+    headers = {"Authorization": "Bearer {}".format(bot_token)}
     headers["Content-Type"] = "application/json; charset=utf-8"
 
     text = "<@{}> shared a file".format(message_user)
@@ -126,6 +130,9 @@ def download_confirmation_update(message_payload):
     :param json message_payload: Message payload got from Slack
     """
 
+
+    bot_token = database.fetch_token("bot")
+
     orig_message = message_payload["original_message"]
     orig_message_text = orig_message["text"]
     msg_url = orig_message["attachments"][0]["actions"][0]["value"]
@@ -144,7 +151,7 @@ def download_confirmation_update(message_payload):
                     "color": "#3AA3E3",
                     }]
 
-    headers = {"Authorization": "Bearer {}".format(os.environ["BOT_OAUTH"])}
+    headers = {"Authorization": "Bearer {}".format(bot_token)}
 
     headers["Content-Type"] = "application/json; charset=utf-8"
 

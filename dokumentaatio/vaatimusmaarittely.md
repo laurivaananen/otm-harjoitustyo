@@ -14,7 +14,3 @@ Ohjelmalla on vain yksi käyttäjä
 * Käyttäjä voi selata ja poistaa jo valmiiksi lisättyjä komentoja
 * Kun joku käyttäjä(ei botti) jakaa Slackissa tiedoston, niin botti lähettää sinulle viestin, missä se kysyy haluatko ladata kyseisen tiedoston koneellesi.
 * Jos valitset Download niin botti lataa tiedoston koneellesi.
-
-## Jatkokehitysideoita
-
-* Botti voi vastata kuvalla tai videolla

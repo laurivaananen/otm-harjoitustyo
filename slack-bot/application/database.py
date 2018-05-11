@@ -115,12 +115,12 @@ def fetch_token(token):
     conn = get_database_connection()
     cursor = conn.cursor()
     if token == "slack":
-        token = cursor.execute("SELECT token.slack FROM token;").fetchone()[0]
+        token = cursor.execute("SELECT token.slack FROM token;").fetchone()
     elif token == "bot":
-        token = cursor.execute("SELECT token.bot FROM token;").fetchone()[0]
+        token = cursor.execute("SELECT token.bot FROM token;").fetchone()
 
     if token:
-        print("\n\n" + token)
-        return token
+        return token[0]
     else:
-        raise ValueError("Couldn't find token in the database. Make sure you have added it")
+        print("Couldn't find token in the database. Make sure you have added it")
+        return None
